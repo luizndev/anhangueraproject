@@ -1,3 +1,4 @@
+curso,dia,professor,disciplina,sala
 Noturno,Segunda,ANA CARLA FERRAZ DE ARAUJO,Direito Penal - dos Crimes em Especie,G- G4
 Noturno,Quinta,ANA PAULA OLIVEIRA SOUZA,Introducao a Biologia Celular e do Desenvolvimento,E - E83
 Noturno,Sexta,ANA PAULA OLIVEIRA SOUZA,Microbiologia,H - H64
@@ -129,7 +130,6 @@ Noturno,Terça,OSMUNDO NOGUEIRA GONZAGA,Direito do Trabalho,D - D87
 Noturno,Quarta,OSMUNDO NOGUEIRA GONZAGA,Direito do Trabalho,F - F14
 Noturno,Sexta,PATRICIA DONATELI,Quimica Analitica,G - G4
 Noturno,Terça,PATRICIA DONATELI,Quimica e Ciencia dos Materiais,G -  G7
-curso,dia,professor,disciplina,sala
 Noturno,Sexta,RAIANNE PAIXAO SANTANA,Higiene e Microbiologia dos Alimentos,D - D85
 Noturno,Quinta,RAIANNE PAIXAO SANTANA,"Nutricao, Ciencia e Profissao",G - G1
 Noturno,Quarta,RAIANNE PAIXAO SANTANA,Planejamento e Organizacao de Unidade de Alimentacao e Nutricao,G - G1
