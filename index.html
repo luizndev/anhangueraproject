@@ -45,6 +45,8 @@
         <h2>Localize sua sala, por:</h2>
         <button class="buttonReturn" onclick="voltar('dia')">Voltar</button>
       </div>
+      <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()">
+      <input type="text" id="filtro-professor" placeholder="Filtre aqui por Professor(a)" oninput="filtrarProfessores()">
       <div id="lista-opcoes"></div>
     </div>
 
@@ -53,8 +55,6 @@
         <h2 id="lista-titulo"></h2>
         <button class="buttonReturn" onclick="voltar('opcao')">Voltar</button>
       </div>
-      <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()">
-      <input type="text" id="filtro-professor" placeholder="Filtre aqui por Professor(a)" oninput="filtrarProfessores()">
       <ul id="lista-opcoes"></ul>
     </div>
 
@@ -130,7 +130,7 @@
         professorDiv.style.fontWeight = 'bold'; 
 
         const detalhesDiv = document.createElement('div');
-        detalhesDiv.textContent = `${item.disciplina} - Sala: ${item.sala}`;
+        detalhesDiv.textContent = `Disciplina: ${item.disciplina} <br> Sala: ${item.sala}`;
         
         li.appendChild(professorDiv);
         li.appendChild(detalhesDiv);
