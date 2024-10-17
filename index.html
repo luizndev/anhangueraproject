@@ -48,18 +48,36 @@
       <div id="lista-opcoes"></div> <!-- Aqui, vamos colocar a lista de cursos -->
     </div>
 
-    <div class="section hidden" id="lista-section">
+   <div class="section hidden" id="lista-section">
       <div class="headeDisplay">
         <h2 id="lista-titulo"></h2>
         <button class="buttonReturn" onclick="voltar('opcao')">Voltar</button>
       </div>
-      <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()">
+<!--       <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()"> -->
+      <input type="text" id="filtro-professor" placeholder="Filtre aqui por Professor(a)" oninput="filtrarProfessores()">
       <ul id="lista-opcoes"></ul>
     </div>
+
 
   </div>
 
   <script>
+    function filtrarProfessores() {
+      const filtro = document.getElementById('filtro-professor').value.toLowerCase();
+      const lista = document.getElementById('lista-opcoes');
+      const itens = lista.getElementsByTagName('li');
+    
+      for (let i = 0; i < itens.length; i++) {
+        const itemTexto = itens[i].textContent || itens[i].innerText;
+        if (itemTexto.toLowerCase().includes(filtro)) {
+          itens[i].style.display = '';
+        } else {
+          itens[i].style.display = 'none';
+        }
+      }
+    }
+
+    
     let dados = [];
 
     function carregarDados() {
@@ -90,22 +108,21 @@
       diaSelecionado = dia;
       document.getElementById('dia-section').classList.add('hidden');
       document.getElementById('opcao-section').classList.remove('hidden');
-      mostrarCursos(); // Chama a função para mostrar os cursos automaticamente
+      mostrarCursos(); 
     }
 
     function mostrarCursos() {
       const cursosFiltrados = dados.filter(d => d.curso === periodoSelecionado && d.dia === diaSelecionado);
 
       const lista = document.getElementById('lista-opcoes');
-      lista.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
+      lista.innerHTML = '';
 
-      const cursos = [...new Set(cursosFiltrados.map(item => item.faculdade))]; // Extrai cursos únicos
+      const cursos = [...new Set(cursosFiltrados.map(item => item.faculdade))];
 
       cursos.forEach(curso => {
         const li = document.createElement('li');
-        li.textContent = curso; // Exibe o curso
+        li.textContent = curso; 
         
-        // Ao clicar no curso, mostra professores
         li.onclick = () => mostrarProfessores(curso); 
 
         lista.appendChild(li);
@@ -116,11 +133,11 @@
       const professoresFiltrados = dados.filter(item => item.faculdade === curso && item.curso === periodoSelecionado && item.dia === diaSelecionado);
       
       const lista = document.getElementById('lista-opcoes');
-      lista.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
+      lista.innerHTML = ''; 
 
       professoresFiltrados.forEach(item => {
         const li = document.createElement('li');
-        li.textContent = `${item.professor} - ${item.disciplina} - Sala: ${item.sala}`; // Mostra professor, disciplina e sala
+        li.textContent = `${item.professor} <br> ${item.disciplina} - Sala: ${item.sala}`; 
         
         lista.appendChild(li);
       });
