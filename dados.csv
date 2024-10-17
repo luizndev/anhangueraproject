@@ -107,13 +107,13 @@ Noturno,Quarta,GLEIDA DANESE,Gestao em Saude,G - G5,ENFERMAGEM
 Noturno,Quinta,GLEIDA DANESE,Saude do Trabalhador,H - H70,ENFERMAGEM
 Noturno,Segunda,GLEIDA DANESE,Enfermagem na Saude da Mulher,E - E83,ENFERMAGEM
 Noturno,Terça,GLEIDA DANESE,Enfermagem na Saude da Mulher,I - I54,ENFERMAGEM
-Noturno,Sexta,ANA PAULA OLIVEIRA SOUZA,Microbiologia,H - H64,
+Noturno,Sexta,ANA PAULA OLIVEIRA SOUZA,Microbiologia,H - H64,AGRONOMIA 
 Noturno,Terça,PATRICIA DONATELI,Quimica e Ciencia dos Materiais,G -  G7,ENGENHARIA MECANICA
-Noturno,Segunda,EMANOEL JOSE CANCELA COSTA,Calculo Diferencial e Integral III,E - E79,
-Noturno,Quinta,FLAVIO JOSE DE OLIVEIRA,Fenomenos de Transporte,H - H71,
-Noturno,Terça,FLAVIO JOSE DE OLIVEIRA MUDAR NO BLOG,"Legislacao, Seguranca do Trabalho e Meio Ambiente",G - G23,
+Noturno,Segunda,EMANOEL JOSE CANCELA COSTA,Calculo Diferencial e Integral III,E - E79,DIREITO
+Noturno,Quinta,FLAVIO JOSE DE OLIVEIRA,Fenomenos de Transporte,H - H71,CIENCIA DA COMPUTACAO
+Noturno,Terça,FLAVIO JOSE DE OLIVEIRA MUDAR NO BLOG,"Legislacao, Seguranca do Trabalho e Meio Ambiente",G - G23,CIENCIA DA COMPUTACAO
 Noturno,Sexta,LETICIA COSTA RIBEIRO,Metodos Matematicos,I - I49,ENGENHARIA MECANICA
-Noturno,Sexta,SEBASTIAO AMILCAR DE FIGUEIREDO,Fisica Geral e Experimental - Energia,H - H66,
+Noturno,Sexta,SEBASTIAO AMILCAR DE FIGUEIREDO,Fisica Geral e Experimental - Energia,H - H66,ENGENHARIA MECANICA
 Noturno,Quarta,KAMILA SANTANA PIONTKOVSKY,Matrizes do Pensamento em Psicologia - Psicanalise,G - G23,PSICOLOGIA
 Noturno,Segunda,ISMAEL FERREIRA DE ANDRADE MORAIS,Desenvolvimento Humano I,C - C89,PSICOLOGIA
 Noturno,Terça,HUGO GOUVEIA GONZAGA DE LIMA,Diagnostico e Intervencao em Psicologia,D - D88,PSICOLOGIA
@@ -160,3 +160,70 @@ Noturno,Sexta,LEANDRO CORREA BICHARA,Clinica Integrada de Atencao a Pessoa Com D
 Noturno,Quarta,SOFIA BAUER RIEGER,Estudos Integrados dos Agravos em Saude Bucal,H - H72,ODONTOLOGIA
 Noturno,Segunda,FABRÍCIO RODRIGUES FONSECA DE SÁ,Fundamentos Tecnicos de Enfermagem,G- G3,ENFERMAGEM 
 Noturno,Quarta,FABRÍCIO RODRIGUES FONSECA DE SÁ,Fundamentos Tecnicos de Enfermagem,H - H73,ENFERMAGEM
+Noturno - EAD,Segunda,Suelen Alves Seglia,NUTRIÇÃO  3° e 4° semestre,I - I45,NUTRIÇÃO
+Noturno - EAD,Segunda,Elen Gomes De Oliveira,ENFERMAGEM - 3° semestre,I - I46,ENFERMAGEM
+Noturno - EAD,Segunda,Islan Damascena Gomes,BIOMEDICINA - 3° e 4° SEMESTRE,I - I47,BIOMEDICINA
+Noturno - EAD,Segunda,Hilquias Souza Aguilar,Pedagogia 5°,I - I48,PEDAGODIA
+Noturno - EAD,Segunda,Maianne Malacarne Rodrigues Farias,FARMÁCIA - 3° e 4° SEMESTRE,I - I49,FARMÁCIA
+Noturno - EAD,Segunda,Klen Jefferson Guimaraes Sena,FISIOTERAPIA - 3° e 4° SEMESTRE,I - I50,FISIOTERAPIA
+Noturno - EAD,Segunda,Lucas Farias De Oliveira,Enfermagem - 4° Período,I - I51,ENFERMAGEM
+Noturno - EAD,Terça,Natan Brito Santos,Agronomia 5° e 6°,I - I45,AGRONOMIA
+Noturno - EAD,Terça,Klen Jefferson Guimaraes Sena,Fisioterapia - 10°,I - I46,FISIOTERAPIA
+Noturno - EAD,Terça,Arthur Carvalho Franca,ADMINISTRAÇÃO / Ciencias Contabeis -      3/4° SEMESTRE,I - I47,ADM - CIÊNCIA C.
+Noturno - EAD,Terça,Adson Santana Moura,AGRONOMIA 3° e 4° SEM,I - I48,AGRONOMIA
+Noturno - EAD,Terça,Rafael Pereira Lima,RECURSOS HUMANOS - 1° e  2° SEM,I - I49,RECURSOS HUMANOS
+Noturno - EAD,Terça,Elen Gomes De Oliveira,Enfermagem 9°,I - I50,ENFERMAGEM
+Noturno - EAD,Terça,Novo Tutor,Educação Física Licenciatura / Bacharel - 1° e 2º,I - I51,EDUCAÇÃO FÍSICA
+Noturno - EAD,Terça,Elisnak De Sousa Miranda,Farmácia - 1° e 2º semestre,I - I52,FARMÁCIA
+Noturno - EAD,Terça,Hilquias Souza Aguilar,Pedagogia -    3° e 4° SEMESTRE,I - I53,PEDAGODIA
+Noturno - EAD,Terça,Lucas Farias De Oliveira,Enfermagem 10°,I - I54,ENFERMAGEM
+Noturno - EAD,Terça,SUELEN ALVES SEGLIA,"Sinergia de Saúde - 1° e 2º semestre - ENFERMAGEM
++ NUTRI",H - H76,ENFERMAGEM + NUTRIÇÃO
+Noturno - EAD,Terça,ELEN GOMES DE OLIVEIRA,Sinergia de Saúde - 1° e 2º semestre BIOMED + FISIO,H - H78,BIOMEDICINA + FISIOTERAPIA
+Noturno - EAD,Quarta,ISLAN DAMASCENA GOMES,CST EM SEGURANÇA DO TRABALHO - 1° e 2º SEM,I - I45,SEGURANÇA DO TRABALHO
+Noturno - EAD,Quarta,HILQUIAS SOUZA AGUILAR,Fisioterapia    - 7° e 8°,I - I46,FISIOTERAPIA
+Noturno - EAD,Quarta,MAIANNE MALACARNE RODRIGUES FARIAS,Engenharia Produção - 7° e 8°,I - I47,ENGENHARIA DE PRODUÇÃO
+Noturno - EAD,Quarta,KLEN JEFFERSON GUIMARAES SENA,Biomedicina      -  7° e 8°,I - I48,BIOMEDICINA
+Noturno - EAD,Quarta,LUCAS FARIAS DE OLIVEIRA,Farmácia - 7° e 8°,I - I49,FARMÁCIA
+Noturno - EAD,Quarta,NATAN BRITO SANTOS,Enfermagem   -  7°,I - I50,ENFERMAGEM
+Noturno - EAD,Quarta,KLEN JEFFERSON GUIMARAES SENA,EDUCAÇÃO FISICA - 3°/4° SEMESTRE BACHAREL / Licenciatura,I - I51,EDUCAÇÃO FÍSICA
+Noturno - EAD,Quarta,ARTHUR CARVALHO FRANCA,Nutrição - 7° e 8°,I - I52,NUTRIÇÃO
+Noturno - EAD,Quarta,ADSON SANTANA MOURA,Administração 7° e 8°,I - I53,NUTRIÇÃO
+Noturno - EAD,Quarta,RAFAEL PEREIRA LIMA,Engenharia Civil - 7° e 8°,I - I54,ENGENHARIA CIVIL
+Noturno - EAD,Quarta,ELEN GOMES DE OLIVEIRA,Enfermagem   - 8°,I - I55,ENFERMAGEM
+Noturno - EAD,Quarta,NOVO TUTOR,Sinergia de Licenciatura - 1° e 2º semestre ( PEDAGOGIA ),D - D87,PEDAGODIA
+Noturno - EAD,Quarta,ELISNAK DE SOUSA MIRANDA,Agronomia - 1° e 2º semestre,H -  H65,AGRONOMIA
+Noturno - EAD,Quarta,HILQUIAS SOUZA AGUILAR,Estética e Cosmética - 2º semestre,H -  H64,ESTÉTICA E COSMÉTICA
+Noturno - EAD,Quarta,LUCAS FARIAS DE OLIVEIRA,Ciências Biologicas                    1° e 2º SEM,H -  H67,CIÊNCIAS BIOLOGICAS
+Noturno - EAD,Quarta,SUELEN ALVES SEGLIA,Estética e Cosmética - 1°  semestre,H -  H76,ESTÉTICA E COSMÉTICA
+Noturno - EAD,Quarta,ISLAN DAMASCENA GOMES,"Sinergia de Adm, Contábeis e Eco - 2º semestre",F - F16,ADM - CIÊNCIA C.
+Noturno - EAD,Quinta,ADSON SANTANA MOURA,Superior  de tecnologia em Estética e Cosmética - 5° e 6°,I - I45,ESTÉTICA E COSMÉTICA
+Noturno - EAD,Quinta,KLEN JEFFERSON GUIMARAES SENA,Fisioterapia 5° e 6°,I - I46,FISIOTERAPIA
+Noturno - EAD,Quinta,ABINADABE SANTOS OLIVEIRA,Ciências Contábeis 5° e 6°,I - I47,CIÊNCIAS CONTÁBEIS
+Noturno - EAD,Quinta,ISLAN DAMASCENA GOMES,Biomedicina 5° e 6°,I - I48,BIOMEDICINA
+Noturno - EAD,Quinta,ELISNAK DE SOUSA MIRANDA,Enfermagem 5°,I - I49,ENFERMAGEM
+Noturno - EAD,Quinta,ELEN GOMES DE OLIVEIRA,Enfermagem  6°,I - I50,ENFERMAGEM
+Noturno - EAD,Quinta,NOVO TUTOR,ESTETICA E COSMETICA - 3° e 4°,I - I51,ESTÉTICA E COSMÉTICA
+Noturno - EAD,Quinta,SUELEN ALVES SEGLIA,Nutrição 5° e 6°,I - I52,NUTRIÇÃO
+Noturno - EAD,Quinta,HILQUIAS SOUZA AGUILAR,Administração 5° e 6°,I - I53,ADMINISTRAÇÃO
+Noturno - EAD,Quinta,DANILO DUARTE NERES,Farmácia 5° e 6°,I - I54,FARMÁCIA
+Noturno - EAD,Quinta,LUCAS FARIAS DE OLIVEIRA,Serviço social - 1° e 2º Sem.,I - I55,SERVIÇO SOCIAL
+Noturno - EAD,Quinta,ANIZ BARCELOS ARAMUNI GONCALVES,ANALISE E DESENV. SISTEMAS  - 1° e 2º,B - LAB. INFO. 5,ANALISE E DESENV. SISTEMAS
+Noturno - EAD,Sexta,NATAN BRITO SANTOS,ADMINISTRAÇÃO 3° e 4°,I - I55,ADMINISTRAÇÃO
+,,RAIZA SILVA SANTOS,,,
+,,EDIANE OLIVEIRA SOUZA,,,
+,,LAYZE COSTA RIBEIRO,,,
+,,ARTHUR CARVALHO FRANCA,,,
+,,LAYZE COSTA RIBEIRO,,,
+,,KLEN JEFFERSON GUIMARAES SENA,,,
+,,ARTHUR CARVALHO FRANCA,,,
+,,ISLAN DAMASCENA GOMES,,,
+,,LUCAS FARIAS DE OLIVEIRA,,,
+,,ELEN GOMES DE OLIVEIRA,,,
+,,RAIZA SILVA SANTOS,,,
+,,SUELEN ALVES SEGLIA,,,
+,,HILQUIAS SOUZA AGUILAR,,,
+,,MAIANNE MALACARNE RODRIGUES FARIAS,,,
+,,NAYANE DOS SANTOS RODRIGUES,,,
+,,TALIS ANTONIO ALMEIDA DA SILVA,,,
+,,HILQUIAS SOUZA AGUILAR,,,
