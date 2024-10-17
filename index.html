@@ -45,39 +45,22 @@
         <h2>Localize sua sala, por:</h2>
         <button class="buttonReturn" onclick="voltar('dia')">Voltar</button>
       </div>
-      <div id="lista-opcoes"></div> <!-- Aqui, vamos colocar a lista de cursos -->
+      <div id="lista-opcoes"></div>
     </div>
 
-   <div class="section hidden" id="lista-section">
+    <div class="section hidden" id="lista-section">
       <div class="headeDisplay">
         <h2 id="lista-titulo"></h2>
         <button class="buttonReturn" onclick="voltar('opcao')">Voltar</button>
       </div>
-<!--       <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()"> -->
+      <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()">
       <input type="text" id="filtro-professor" placeholder="Filtre aqui por Professor(a)" oninput="filtrarProfessores()">
       <ul id="lista-opcoes"></ul>
     </div>
 
-
   </div>
 
   <script>
-    function filtrarProfessores() {
-      const filtro = document.getElementById('filtro-professor').value.toLowerCase();
-      const lista = document.getElementById('lista-opcoes');
-      const itens = lista.getElementsByTagName('li');
-    
-      for (let i = 0; i < itens.length; i++) {
-        const itemTexto = itens[i].textContent || itens[i].innerText;
-        if (itemTexto.toLowerCase().includes(filtro)) {
-          itens[i].style.display = '';
-        } else {
-          itens[i].style.display = 'none';
-        }
-      }
-    }
-
-    
     let dados = [];
 
     function carregarDados() {
@@ -130,17 +113,32 @@
     }
 
     function mostrarProfessores(curso) {
-      const professoresFiltrados = dados.filter(item => item.faculdade === curso && item.curso === periodoSelecionado && item.dia === diaSelecionado);
+      const professoresFiltrados = dados.filter(item => 
+        item.faculdade === curso && 
+        item.curso === periodoSelecionado && 
+        item.dia === diaSelecionado
+      );
       
       const lista = document.getElementById('lista-opcoes');
       lista.innerHTML = ''; 
 
       professoresFiltrados.forEach(item => {
         const li = document.createElement('li');
-        li.textContent = `${item.professor} <br> ${item.disciplina} - Sala: ${item.sala}`; 
+        
+        const professorDiv = document.createElement('div');
+        professorDiv.textContent = item.professor;
+        professorDiv.style.fontWeight = 'bold'; 
+
+        const detalhesDiv = document.createElement('div');
+        detalhesDiv.textContent = `${item.disciplina} - Sala: ${item.sala}`;
+        
+        li.appendChild(professorDiv);
+        li.appendChild(detalhesDiv);
         
         lista.appendChild(li);
       });
+      
+      filtrarProfessores();
     }
 
     function voltar(passo) {
@@ -162,6 +160,21 @@
 
     function filtrarLista() {
       const filtro = document.getElementById('filtro-input').value.toLowerCase();
+      const lista = document.getElementById('lista-opcoes');
+      const itens = lista.getElementsByTagName('li');
+
+      for (let i = 0; i < itens.length; i++) {
+        const itemTexto = itens[i].textContent || itens[i].innerText;
+        if (itemTexto.toLowerCase().includes(filtro)) {
+          itens[i].style.display = '';
+        } else {
+          itens[i].style.display = 'none';
+        }
+      }
+    }
+
+    function filtrarProfessores() {
+      const filtro = document.getElementById('filtro-professor').value.toLowerCase();
       const lista = document.getElementById('lista-opcoes');
       const itens = lista.getElementsByTagName('li');
 
