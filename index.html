@@ -45,9 +45,7 @@
         <h2>Localize sua sala, por:</h2>
         <button class="buttonReturn" onclick="voltar('dia')">Voltar</button>
       </div>
-      <div class="displayButtons">
-        <button class="btn" onclick="selecionarOpcao('Curso')">Curso</button>
-      </div>
+      <div id="lista-opcoes"></div> <!-- Aqui, vamos colocar a lista de cursos -->
     </div>
 
     <div class="section hidden" id="lista-section">
@@ -81,8 +79,7 @@
 
     let periodoSelecionado = '';
     let diaSelecionado = '';
-    let opcaoSelecionada = '';
-
+    
     function selecionarPeriodo(periodo) {
       periodoSelecionado = periodo;
       document.getElementById('periodo-section').classList.add('hidden');
@@ -93,28 +90,23 @@
       diaSelecionado = dia;
       document.getElementById('dia-section').classList.add('hidden');
       document.getElementById('opcao-section').classList.remove('hidden');
+      mostrarCursos(); // Chama a função para mostrar os cursos automaticamente
     }
 
-    function selecionarOpcao(opcao) {
-      opcaoSelecionada = opcao;
-      document.getElementById('opcao-section').classList.add('hidden');
-      document.getElementById('lista-section').classList.remove('hidden');
-
-      const titulo = 'Selecione o Curso';
-      document.getElementById('lista-titulo').textContent = titulo;
-
+    function mostrarCursos() {
       const cursosFiltrados = dados.filter(d => d.curso === periodoSelecionado && d.dia === diaSelecionado);
 
       const lista = document.getElementById('lista-opcoes');
-      lista.innerHTML = '';
+      lista.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
 
       const cursos = [...new Set(cursosFiltrados.map(item => item.faculdade))]; // Extrai cursos únicos
 
       cursos.forEach(curso => {
         const li = document.createElement('li');
         li.textContent = curso; // Exibe o curso
-
-        li.onclick = () => mostrarProfessores(curso); // Ao clicar no curso, mostra professores
+        
+        // Ao clicar no curso, mostra professores
+        li.onclick = () => mostrarProfessores(curso); 
 
         lista.appendChild(li);
       });
