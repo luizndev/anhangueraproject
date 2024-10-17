@@ -191,3 +191,8 @@ font-size: 17px;
     margin-bottom: 10px !important;
     list-style: none;
 }
+
+.descricaoDiv{
+  color: rgba(255, 255, 255, 0.548);
+  font-weight: 300;
+}
