@@ -42,10 +42,12 @@
 
     <div class="section hidden" id="opcao-section">
       <div class="headeDisplay">
-        <h2 id="opcao-titulo"></h2>
+        <h2>Localize sua sala, por:</h2>
         <button class="buttonReturn" onclick="voltar('dia')">Voltar</button>
       </div>
-      <ul id="lista-opcoes"></ul>
+      <div class="displayButtons">
+        <button class="btn" onclick="selecionarOpcao('Curso')">Curso</button>
+      </div>
     </div>
 
     <div class="section hidden" id="lista-section">
@@ -54,7 +56,7 @@
         <button class="buttonReturn" onclick="voltar('opcao')">Voltar</button>
       </div>
       <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()">
-      <ul id="lista-professores"></ul>
+      <ul id="lista-opcoes"></ul>
     </div>
 
   </div>
@@ -79,6 +81,7 @@
 
     let periodoSelecionado = '';
     let diaSelecionado = '';
+    let opcaoSelecionada = '';
 
     function selecionarPeriodo(periodo) {
       periodoSelecionado = periodo;
@@ -89,32 +92,38 @@
     function selecionarDia(dia) {
       diaSelecionado = dia;
       document.getElementById('dia-section').classList.add('hidden');
-      mostrarCursos(); // Exibe a lista de cursos para o dia selecionado
+      document.getElementById('opcao-section').classList.remove('hidden');
     }
 
-    function mostrarCursos() {
-      const cursosFiltrados = dados.filter(d => d.dia === diaSelecionado && d.turno === periodoSelecionado);
-      
-      document.getElementById('opcao-section').classList.remove('hidden');
-      document.getElementById('lista-opcoes').innerHTML = '';
+    function selecionarOpcao(opcao) {
+      opcaoSelecionada = opcao;
+      document.getElementById('opcao-section').classList.add('hidden');
+      document.getElementById('lista-section').classList.remove('hidden');
 
-      const titulo = `Selecione um Curso - ${diaSelecionado}`;
-      document.getElementById('opcao-titulo').textContent = titulo;
+      const titulo = 'Selecione o Curso';
+      document.getElementById('lista-titulo').textContent = titulo;
 
-      cursosFiltrados.forEach(item => {
+      const cursosFiltrados = dados.filter(d => d.curso === periodoSelecionado && d.dia === diaSelecionado);
+
+      const lista = document.getElementById('lista-opcoes');
+      lista.innerHTML = '';
+
+      const cursos = [...new Set(cursosFiltrados.map(item => item.faculdade))]; // Extrai cursos únicos
+
+      cursos.forEach(curso => {
         const li = document.createElement('li');
-        li.textContent = item.faculdade; // Exibe o curso
+        li.textContent = curso; // Exibe o curso
 
-        li.onclick = () => mostrarProfessores(item.faculdade); // Chama a função ao clicar no curso
+        li.onclick = () => mostrarProfessores(curso); // Ao clicar no curso, mostra professores
 
-        document.getElementById('lista-opcoes').appendChild(li);
+        lista.appendChild(li);
       });
     }
 
     function mostrarProfessores(curso) {
-      const professoresFiltrados = dados.filter(item => item.faculdade === curso && item.dia === diaSelecionado && item.turno === periodoSelecionado);
+      const professoresFiltrados = dados.filter(item => item.faculdade === curso && item.curso === periodoSelecionado && item.dia === diaSelecionado);
       
-      const lista = document.getElementById('lista-professores');
+      const lista = document.getElementById('lista-opcoes');
       lista.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
 
       professoresFiltrados.forEach(item => {
@@ -123,9 +132,6 @@
         
         lista.appendChild(li);
       });
-
-      document.getElementById('lista-section').classList.remove('hidden'); // Mostra a seção de lista de professores
-      document.getElementById('opcao-section').classList.add('hidden'); // Esconde a seção de cursos
     }
 
     function voltar(passo) {
@@ -147,7 +153,7 @@
 
     function filtrarLista() {
       const filtro = document.getElementById('filtro-input').value.toLowerCase();
-      const lista = document.getElementById('lista-professores');
+      const lista = document.getElementById('lista-opcoes');
       const itens = lista.getElementsByTagName('li');
 
       for (let i = 0; i < itens.length; i++) {
