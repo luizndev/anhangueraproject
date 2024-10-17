@@ -131,6 +131,7 @@
         professorDiv.style.fontWeight = 'bold';
 
         const detalhesDiv = document.createElement('div');
+        detalhesDiv.className = "descricaoDiv";
         detalhesDiv.innerHTML = `Disciplina: ${item.disciplina} <br> Sala: ${item.sala}`;
         
         li.appendChild(professorDiv);
