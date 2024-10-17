@@ -2,12 +2,15 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encontre sua sala na Faculdade Anhanguera de Teixeira de Freitas. Consulte horários, salas e professores.">
+  <meta name="keywords" content="Anhanguera, Teixeira de Freitas, sala, horários, professores, faculdade">
+  <meta name="author" content="Luis Eduardo Andrade Da Silva - Técnico de Informática Jr.">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Encontre sua Sala</title>
+  <title>Encontre sua Sala - Anhanguera Teixeira de Freitas</title>
 </head>
 <body>
   <header class="navbar">
@@ -56,7 +59,6 @@
       </div>
       <ul id="lista-opcoes"></ul>
     </div>
-
   </div>
 
   <script>
@@ -79,7 +81,7 @@
 
     let periodoSelecionado = '';
     let diaSelecionado = '';
-    
+
     function selecionarPeriodo(periodo) {
       periodoSelecionado = periodo;
       document.getElementById('periodo-section').classList.add('hidden');
@@ -90,7 +92,7 @@
       diaSelecionado = dia;
       document.getElementById('dia-section').classList.add('hidden');
       document.getElementById('opcao-section').classList.remove('hidden');
-      mostrarCursos(); 
+      mostrarCursos();
     }
 
     function mostrarCursos() {
@@ -103,9 +105,9 @@
 
       cursos.forEach(curso => {
         const li = document.createElement('li');
-        li.textContent = curso; 
+        li.textContent = curso;
         
-        li.onclick = () => mostrarProfessores(curso); 
+        li.onclick = () => mostrarProfessores(curso);
 
         lista.appendChild(li);
       });
@@ -117,16 +119,16 @@
         item.curso === periodoSelecionado && 
         item.dia === diaSelecionado
       );
-      
+
       const lista = document.getElementById('lista-opcoes');
-      lista.innerHTML = ''; 
+      lista.innerHTML = '';
 
       professoresFiltrados.forEach(item => {
         const li = document.createElement('li');
         
         const professorDiv = document.createElement('div');
         professorDiv.textContent = item.professor;
-        professorDiv.style.fontWeight = 'bold'; 
+        professorDiv.style.fontWeight = 'bold';
 
         const detalhesDiv = document.createElement('div');
         detalhesDiv.innerHTML = `Disciplina: ${item.disciplina} <br> Sala: ${item.sala}`;
@@ -136,7 +138,6 @@
         
         lista.appendChild(li);
       });
-      
     }
 
     function voltar(passo) {
@@ -170,8 +171,6 @@
         }
       }
     }
-
-   
   </script>
 
 </body>
