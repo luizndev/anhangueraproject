@@ -46,7 +46,6 @@
         <button class="buttonReturn" onclick="voltar('dia')">Voltar</button>
       </div>
       <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()">
-      <input type="text" id="filtro-professor" placeholder="Filtre aqui por Professor(a)" oninput="filtrarProfessores()">
       <div id="lista-opcoes"></div>
     </div>
 
@@ -138,7 +137,6 @@
         lista.appendChild(li);
       });
       
-      filtrarProfessores();
     }
 
     function voltar(passo) {
@@ -173,20 +171,7 @@
       }
     }
 
-    function filtrarProfessores() {
-      const filtro = document.getElementById('filtro-professor').value.toLowerCase();
-      const lista = document.getElementById('lista-opcoes');
-      const itens = lista.getElementsByTagName('li');
-
-      for (let i = 0; i < itens.length; i++) {
-        const itemTexto = itens[i].textContent || itens[i].innerText;
-        if (itemTexto.toLowerCase().includes(filtro)) {
-          itens[i].style.display = '';
-        } else {
-          itens[i].style.display = 'none';
-        }
-      }
-    }
+   
   </script>
 
 </body>
