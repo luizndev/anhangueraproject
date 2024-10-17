@@ -188,4 +188,5 @@ font-size: 17px;
 
 #lista-opcoes li{
     margin-bottom: 10px !important;
+    list-style: none;
 }
