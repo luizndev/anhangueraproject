@@ -42,13 +42,10 @@
 
     <div class="section hidden" id="opcao-section">
       <div class="headeDisplay">
-        <h2>Localize sua sala, por:</h2>
+        <h2>Selecione um curso:</h2>
         <button class="buttonReturn" onclick="voltar('dia')">Voltar</button>
       </div>
-      <div class="displayButtons">
-        <button class="btn" onclick="selecionarOpcao('Professor')">Professor</button>
-        <button class="btn" onclick="selecionarOpcao('Disciplina')">Disciplina</button>
-      </div>
+      <div class="displayButtons" id="curso-buttons"></div>
     </div>
 
     <div class="section hidden" id="lista-section">
@@ -56,7 +53,7 @@
         <h2 id="lista-titulo"></h2>
         <button class="buttonReturn" onclick="voltar('opcao')">Voltar</button>
       </div>
-      <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()">
+      <input type="text" id="filtro-input" placeholder="Filtre aqui por Curso" oninput="filtrarLista()">
       <ul id="lista-opcoes"></ul>
     </div>
 
@@ -82,7 +79,7 @@
 
     let periodoSelecionado = '';
     let diaSelecionado = '';
-    let opcaoSelecionada = '';
+    let cursoSelecionado = '';
 
     function selecionarPeriodo(periodo) {
       periodoSelecionado = periodo;
@@ -94,30 +91,40 @@
       diaSelecionado = dia;
       document.getElementById('dia-section').classList.add('hidden');
       document.getElementById('opcao-section').classList.remove('hidden');
+      
+      // Preencher os cursos disponíveis
+      const cursosUnicos = [...new Set(dados.map(item => item.faculdade))];
+      const cursoButtons = document.getElementById('curso-buttons');
+      cursoButtons.innerHTML = ''; // Limpar botões existentes
+
+      cursosUnicos.forEach(curso => {
+        const button = document.createElement('button');
+        button.className = 'btn';
+        button.onclick = () => selecionarCurso(curso);
+        button.textContent = curso;
+        cursoButtons.appendChild(button);
+      });
     }
 
-    function selecionarOpcao(opcao) {
-      opcaoSelecionada = opcao;
+    function selecionarCurso(curso) {
+      cursoSelecionado = curso;
       document.getElementById('opcao-section').classList.add('hidden');
       document.getElementById('lista-section').classList.remove('hidden');
 
-      const titulo = opcao === 'Professor' ? 'Selecione o Professor' : 'Selecione a Disciplina';
-      document.getElementById('lista-titulo').textContent = titulo;
+      document.getElementById('lista-titulo').textContent = `Aulas de ${curso}`;
 
-      const opcoesFiltradas = dados.filter(d => d.curso === periodoSelecionado && d.dia === diaSelecionado);
+      const opcoesFiltradas = dados.filter(d => d.curso === periodoSelecionado && d.dia === diaSelecionado && d.faculdade === curso);
 
       const lista = document.getElementById('lista-opcoes');
       lista.innerHTML = ''; 
 
       opcoesFiltradas.forEach(item => {
         const li = document.createElement('li');
-        li.textContent = opcao === 'Professor' ? item.professor : item.disciplina;
+        li.textContent = `Disciplina: ${item.disciplina} - Professor: ${item.professor} - Sala: ${item.sala}`;
         
         const detalhes = document.createElement('div');
         detalhes.className = 'detalhes';
-        detalhes.textContent = opcao === 'Professor'
-          ? `Disciplina: ${item.disciplina} - Sala: ${item.sala}`
-          : `Professor: ${item.professor} - Sala: ${item.sala}`;
+        detalhes.textContent = `Sala: ${item.sala}`;
         
         li.onclick = () => {
           detalhes.style.display = detalhes.style.display === 'none' || detalhes.style.display === '' ? 'block' : 'none';
