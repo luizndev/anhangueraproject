@@ -1,212 +1,60 @@
 curso,dia,professor,disciplina,sala,faculdade
-Noturno,Segunda,RODRIGO SOARES AZEVEDO,Fisioterapia na Saude do Idoso,E - E80,FISIOTERAPIA
-Noturno,Quarta,RODRIGO SOARES AZEVEDO,Fisioterapia na Saude da Crianca e do Adolescente,E - E80,FISIOTERAPIA
-Noturno,Sexta,FABRÍCIO RODRIGUES FONSECA DE SÁ,"Gestao, Qualidade e Seguranca do Paciente",C - C89,ENFERMAGEM
-Noturno,Segunda,RODRIGO SOARES AZEVEDO,Recursos Terapeuticos Biohidricos,E - E80,FISIOTERAPIA
-Noturno,Quarta,WANDERSON SILVA SOUSA,Protese e Ortese,E - E81,FISIOTERAPIA
-Noturno,Terça,RODRIGO SOARES AZEVEDO,Fisioterapia na Atencao Primaria,E - E80,FISIOTERAPIA
-Noturno,Sexta,LUCIANA ROSSI DE OLIVEIRA,"Recursos Terapeuticos Bioeletricos, Termicos, Mecanicos",E - E80,FISIOTERAPIA
-Noturno,Quinta,DANIELA AMARAL DE MELO PEREIRA,Fundamentos da Fisioterapia na Atencao Primaria,E - E80,FISIOTERAPIA
-Noturno,Quinta,RODRIGO SOARES AZEVEDO,cAlculo Diferencial e Integral III,E - E81,FISIOTERAPIA
-Noturno,Quinta,LUCIANA ROSSI DE OLIVEIRA,Fisioterapia na Saude da Mulher,E - E82,FISIOTERAPIA
-Noturno,Sexta,WANDERSON SILVA SOUSA,Fisioterapia na Saude do Neonato,E - E81,FISIOTERAPIA
-Noturno,Quinta,ANA PAULA OLIVEIRA SOUZA,Introducao a Biologia Celular e do Desenvolvimento,E - E83,AGRONOMIA
-Noturno,Terça,LAISE MOURA ORLANDI,"Cien. Morfofuncionais dos Sistemas Digestorio, Endocrino e Renal",D - D86,FARMÁCIA
-Noturno,Terça,LAISE MOURA ORLANDI,"Cien. Morfofuncionais dos Sistemas Digestorio, Endocrino e Renal",D - D86,FARMÁCIA
-Noturno,Segunda,RAYANE SANTOS NASCIMENTO,Saude Publica,E - E81,PSICOLOGIA
-Noturno,Quarta,LUCIANA ROSSI DE OLIVEIRA,Cien. Morfofuncionais do Aparelho Locomotor - Membros Infer. e Coluna Vertebral,E - E82,FISIOTERAPIA
-Noturno,Terça,LUCIANA ROSSI DE OLIVEIRA,NaN,E - E81,FISIOTERAPIA
-Noturno,Quarta,GISELLE VIEIRA RODRIGUES,Conforto Ambiental - Acustico e Luminico,E - E83,ARQUITETURA E URBANISMO
-Noturno,Sexta,KARINA DA SILVA RIGO,Atelier de Projeto de Arquitetura para Espacos Terciarios,E - E82,ARQUITETURA E URBANISMO
-Noturno,Quarta,SARAH GREICY FERREIRA DE JESUS,Sistemas Estruturais - Madeira e Aco,E - E84,ENGENHARIA CIVIL
-Noturno,Terça,GISELLE VIEIRA RODRIGUES,Planejamento Urbano e Regional,E - E82,ARQUITETURA E URBANISMO
-Noturno,Sexta,GISELLE VIEIRA RODRIGUES,Conforto Ambiental - Termico,E - E83,ARQUITETURA E URBANISMO
-Noturno,Quinta,LUIS GUSTAVO NUNES,Atelier de Projeto de Arquitetura Estacao Rodoviaria,F - LAB 1 DESENHO TEC,ARQUITETURA E URBANISMO
-Noturno,Quarta,LETICIA COSTA RIBEIRO,Resistencia dos Materiais,D - D86,ENGENHARIA MECÂNICA
-Noturno,Quinta,GISELLE VIEIRA RODRIGUES,Atelier de Projeto de Arquitetura Residencial de Alta Complexidade,F - LAB 2 DESENHO TEC,ARQUITETURA E URBANISMO
-Noturno,Segunda,LUIS GUSTAVO NUNES,Atelier de Projeto de Arquitetura de Uso Misto em Modelagem BIM,Lab. De Infor 9,ARQUITETURA E URBANISMO
-Noturno,Segunda,KARINA DA SILVA RIGO,Geometria Descritiva Aplicada a Arquitetura,E - E84,ARQUITETURA E URBANISMO
-Noturno,Quinta,KARINA DA SILVA RIGO,Expressao e Representacao - Oficinas,E - E84,ARQUITETURA E URBANISMO
-Noturno,Sexta,LUIS GUSTAVO NUNES,Desenho de Arquitetura e Urbanismo,E - E84,ARQUITETURA E URBANISMO
-Noturno,Sexta,RAIANNE PAIXAO SANTANA,Higiene e Microbiologia dos Alimentos,D - D85,NUTRIÇÃO
-Noturno,Terça,CLEUDSON BRUNO VIANA,Bromatologia,E - E83,FARMÁCIA
-Noturno,Quinta,RAIANNE PAIXAO SANTANA,"Nutricao, Ciencia e Profissao",G - G1,NUTRIÇÃO
-Noturno,Terça,NICOLE MOTTA COUROS,Nutricao em Atividade Fisica,E - E84,NUTRIÇÃO
-Noturno,Quarta,RAIANNE PAIXAO SANTANA,Planejamento e Organizacao de Unidade de Alimentacao e Nutricao,G - G1,NUTRIÇÃO
-Noturno,Quarta,LUCAS LINDOLFO NASCIMENTO CRUZ LANÇAR NO OLIMPO,Nutricao e Dietoterapia Obstetrica e Pediatrica,G - G2,NUTRIÇÃO
-Noturno,Quarta,NICOLE MOTTA COUROS,Seguranca Alimentar e Nutricional,C - C89,NUTRIÇÃO
-Noturno,Segunda,NICOLE MOTTA COUROS,Avaliacao Nutricional Aplicada,G- G1,NUTRIÇÃO
-Noturno,Segunda,NICOLE MOTTA COUROS,Nutricao e Dietoterapia do Adulto e do Idoso,G- G2,NUTRIÇÃO
-Noturno,Quinta,NICOLE MOTTA COUROS,Avaliacao Nutricional,G - G2,NUTRIÇÃO
-Noturno,Terça,DJOYCE HINGRITH SOUZA LIMA,"Cien. Morfofuncionais dos Sistemas Tegumentar, Locomotor e Reprodutor",H - 70,ENFERMAGEM
-Noturno,Sexta,IZABEL ZANUNCIO,Ciencia do Solo - Fisica e Conservacao do Solo e Agua,G - G1,AGRONOMIA
-Noturno,Quinta,DANIEL CAMARA BARCELLOS,Topografia e Georreferenciamento,G - G3,AGRONOMIA
-Noturno,Terça,DEBORAH HOFFMAM CRAUSE,Construcoes Rurais,G - G2,AGRONOMIA
-Noturno,Quarta,DEBORAH HOFFMAM CRAUSE,"Producao, Tecnologia e Armazenamento de Sementes",G - G3,AGRONOMIA
-Noturno,Quinta,BRUNO OLIVEIRA SOARES,Hidrologia e Manejo de Bacias Hidrograficas,G - G4,BRUNÃO
-Noturno,Segunda,BRUNO OLIVEIRA SOARES,Morfologia e Fisiologia Vegetal,G- G23,BRUNÃO
-Noturno,Terça,EDUARDO FERREIRA MEDINA,"Ciencia do Solo - Genese, Morfologia e Classificacao",G - G3,AGRONOMIA
-Noturno,Sexta,DEBORAH HOFFMAM CRAUSE,Irrigacao e Drenagem,G - G2,AGRONOMIA
-Noturno,Quarta,DEIVSON LEONARDO SANTANA DA SILVA,Fundamentos de Calculo Aplicado,G - G4,CIÊNCIA DA COMPUTAÇÃO
-Matutino,Terça,LEANDRO CORREA BICHARA,Clinica Integrada de Atencao ao Adolescente,E - E80,ODONTOLOGIA
-Matutino,Segunda,BRUNO SILVA RANGEL,Clinica Integrada de Atencao ao Idoso,E - E80,ODONTOLOGIA
-Matutino,Quarta,GENILSON MOURA GOMES,Clinica Integrada de Atencao a Pessoa Com Deficiencia,E - E81,ODONTOLOGIA
-Matutino,Quarta,BRUNO SILVA RANGEL,Fundamentos para Reabilitacao Oral III,E - E82,ODONTOLOGIA
-Matutino,Sexta,SOFIA BAUER RIEGER,Clinica Integrada de Atencao a Crianca I,E - E83,ODONTOLOGIA
-Matutino,Terça,JUCILEYDE CAIRES RIBEIRO,Clinica Integrada de Reabilitacao Oral I,E - E81,ODONTOLOGIA
-Matutino,Quinta,JUCILEYDE CAIRES RIBEIRO,Clinica Integrada de Assistencia Odontologica III,E - E80,ODONTOLOGIA
-Matutino,Segunda,GENILSON MOURA GOMES,Clinica Integrada de Assistencia Odontologica II,E - E81,ODONTOLOGIA
-Matutino,Quinta,BRUNO SILVA RANGEL,Fundamentos para Reabilitacao Oral II,E - E79,ODONTOLOGIA
-Matutino,Sexta,BRUNO SILVA RANGEL,Fundamentos para Propedeutica Cirurgica II,E - E79,ODONTOLOGIA
-Matutino,Quarta,JUSSARA SANTOS VALENCA,Odontologia Pre-Clinica III,E - E83,ODONTOLOGIA
-Matutino,Segunda,LOIZE CAROL SENA LIMA,Fundamentos para Assistencia Odontologica I,E - E84,ODONTOLOGIA
-Matutino,Quinta,BRUNO SILVA RANGEL,Fundamentos para Reabilitacao Oral I,E - E79,ODONTOLOGIA
-Matutino,Terça,LOIZE CAROL SENA LIMA,Odontologia Pre-Clinica II,E - E82,ODONTOLOGIA
-Matutino,Terça,DENIS ALEXANDRE FURTADO,Odontologia Legal e Deontologia,E - E83,ODONTOLOGIA
-Matutino,Sexta,LEANDRO CORREA BICHARA,Odontologia Cirurgica e Farmacoterapia,E - E82,ODONTOLOGIA
-Matutino,Segunda,LEANDRO CORREA BICHARA,Odontologia Pre-Clinica - Propedeutica e Imaginologia,E - E82,ODONTOLOGIA
-Noturno,Quinta,GEISE PINHEIRO PINTO,Gestao de Recursos Humanos,G - G5,PSICOLOGIA
-Noturno,Terça,HUGO GOUVEIA GONZAGA DE LIMA,Psicologia Escolar e Educacional,H - H65,PSICOLOGIA
-Noturno,Sexta,CAIKE DE OLIVEIRA GAMA MACHADO,Direito Administrativo - Administracao Publica,D - D88,DIREITO
-Noturno,Segunda,ANA CARLA FERRAZ DE ARAUJO,Direito Penal - dos Crimes em Especie,G- G4,DIREITO
-Noturno,Terça,TATIANE SANTANA SANTOS,Direito Processual do Trabalho,F - F14,DIREITO
-Noturno,Segunda,JONATHAN DE OLIVEIRA MOLAR,Direito Civil - Contratos,D - D85,DIREITO
-Noturno,Terça,OSMUNDO NOGUEIRA GONZAGA,Direito do Trabalho,D - D87,DIREITO
-Noturno,Quarta,CAIKE DE OLIVEIRA GAMA MACHADO,Direito Tributario - Tributos em Especie e Processo Tributario,D - D88,DIREITO
-Noturno,Sexta,FELIPE RAMILYS MARQUES SANTANA,Etica Profissional em Direito,G - G23,DIREITO
-Noturno,Quarta,OSMUNDO NOGUEIRA GONZAGA,Direito do Trabalho,F - F14,DIREITO
-Noturno,Terça,CAIKE DE OLIVEIRA GAMA MACHADO,Direito Administrativo - Regime Juridico Administrativo,F - F16,DIREITO
-Noturno,Segunda,FELIPE RAMILYS MARQUES SANTANA,Etica Profissional em Direito,G - G5,DIREITO
-Noturno,Quinta,TATIANE SANTANA SANTOS,Direito Processual Civil - Conhecimento e Processo Eletronico,D - D85,DIREITO
-Noturno,Quarta,CARLA RODRIGUES COSTA,Direito Civil - Familia,E - E79,DIREITO
-Noturno,Quinta,LUCIANO REIS PORTO,Direito Processual Civil - Execucao e Cumprimento de Sentenca,C - C89,DIREITO
-Noturno,Segunda,TATIANE SANTANA SANTOS,Direito Individual do Trabalho,G - G6,DIREITO
-Noturno,Quinta,JAQUELINE CAMATA DE ALMEIDA CAMPOS,Argumentacao e Pesquisa Juridica,G - G6,DIREITO
-Noturno,Segunda,CARLA RODRIGUES COSTA,Meios Alternativos de Solucao de Conflitos e Deontologia Juridica,G - G4,DIREITO
-Noturno,Terça,FELIPE RAMILYS MARQUES SANTANA,Argumentacao e Pesquisa Juridica,F - F14,DIREITO
-Noturno,Sexta,UIRAS VICENTE LOURENCO,Direito Civil - Parte Geral,G - G3,DIREITO
-Noturno,Terça,UIRAS VICENTE LOURENCO,Direito Civil - Obrigacoes,H - H71,DIREITO
-Noturno,Quinta,UIRAS VICENTE LOURENCO,Responsabilidade Civil e Direito do Consumidor,H - H64,DIREITO
-Noturno,Quarta,LUCIANO REIS PORTO,Teoria Geral do Direito Constitucional,G - G6,DIREITO
-Noturno,Segunda,CAIKE DE OLIVEIRA GAMA MACHADO,Etica Profissional em Direito e Processo Judicial Eletronico,H - H65,DIREITO
-Noturno,Quinta,FELIPE RAMILYS MARQUES SANTANA,Teoria Geral do Processo,H - H75,DIREITO
-Noturno,Sexta,TIAGO PEREIRA AGUIAR SUSMICKAT,Fundamentos Historicos e Introducao ao Estudo do Direito,H - H74,DIREITO
-Noturno,Quarta,UIRAS VICENTE LOURENCO,Direito Civil - Obrigacoes,F - F17,FARMÁCIA
-Noturno,Quinta,CLEUDSON BRUNO VIANA,Quimica Organica Aplicada a Farmacia,H - H65,FARMÁCIA
-Noturno,Quarta,JOHNATHAN JUNIOR VAZ CARVALHO,Farmacologia,H - H78,ENGENHARIA MECÂNICA
-Noturno,Sexta,PATRICIA DONATELI,Quimica Analitica,G - G4,FARMÁCIA
-Noturno,Terça,WESLEI GOLDNER CORREA,Toxicologia,H - H72,FARMÁCIA
-Noturno,Sexta,WESLEI GOLDNER CORREA,"Fisiopatologia e Farmacoterapia das Doencas Infecciosas, Imunes e Virais",G - G5,FARMÁCIA
-Noturno,Sexta,JOHNATHAN JUNIOR VAZ CARVALHO,"Fisiopatologia e Farmacoterapia do Sist. Resp., Renal e Terap. Inov. de Medicam.",G - G6,FARMÁCIA
-Noturno,Terça,JOHNATHAN JUNIOR VAZ CARVALHO,Farmacologia dos Sistemas,H - H73,NUTRIÇÃO
-Noturno,Segunda,LUCAS LINDOLFO NASCIMENTO CRUZ,Biotecnologia e Producao de Alimentos,H - H66,FARMÁCIA
-Noturno,Segunda,JOHNATHAN JUNIOR VAZ CARVALHO,"Fisiopatologia e Farmacoterapia dos Proc. Inflam., Sist. Endocrino e Digestorio",H - H69,FARMÁCIA
-Noturno,Segunda,LAISE MOURA ORLANDI,Quimica Geral,E - E82,JOSÉ GUSTAVO
-Noturno,Quinta,JOSÉ GUSTAVO PADRÃO TAVARES,Cien. Morfofuncionais dos Sistemas Nervoso e Cardiorrespiratorio,H - H69,ENFERMAGEM
-Noturno,Quarta,GLEIDA DANESE,Gestao em Saude,G - G5,ENFERMAGEM
-Noturno,Quinta,GLEIDA DANESE,Saude do Trabalhador,H - H70,ENFERMAGEM
-Noturno,Segunda,GLEIDA DANESE,Enfermagem na Saude da Mulher,E - E83,ENFERMAGEM
-Noturno,Terça,GLEIDA DANESE,Enfermagem na Saude da Mulher,I - I54,AGRONOMIA
-Noturno,Sexta,ANA PAULA OLIVEIRA SOUZA,Microbiologia,H - H64,ENGENHARIA MECÂNICA
-Noturno,Terça,PATRICIA DONATELI,Quimica e Ciencia dos Materiais,G -  G7,DIREITO
-Noturno,Segunda,EMANOEL JOSE CANCELA COSTA,Calculo Diferencial e Integral III,E - E79,CIÊNCIA DA COMPUTAÇÃO
-Noturno,Quinta,FLAVIO JOSE DE OLIVEIRA,Fenomenos de Transporte,H - H71,CIÊNCIA DA COMPUTAÇÃO
-Noturno,Terça,FLAVIO JOSE DE OLIVEIRA MUDAR NO BLOG,"Legislacao, Seguranca do Trabalho e Meio Ambiente",G - G23,ENGENHARIA MECÂNICA
-Noturno,Sexta,LETICIA COSTA RIBEIRO,Metodos Matematicos,I - I49,ENGENHARIA MECÂNICA
-Noturno,Sexta,SEBASTIAO AMILCAR DE FIGUEIREDO,Fisica Geral e Experimental - Energia,H - H66,PSICOLOGIA
-Noturno,Quarta,KAMILA SANTANA PIONTKOVSKY,Matrizes do Pensamento em Psicologia - Psicanalise,G - G23,PSICOLOGIA
-Noturno,Segunda,ISMAEL FERREIRA DE ANDRADE MORAIS,Desenvolvimento Humano I,C - C89,PSICOLOGIA
-Noturno,Terça,HUGO GOUVEIA GONZAGA DE LIMA,Diagnostico e Intervencao em Psicologia,D - D88,PSICOLOGIA
-Noturno,Sexta,GEISE PINHEIRO PINTO,Psicologia e Comunidade,I - I48,PSICOLOGIA
-Noturno,Segunda,RAYANE SANTOS NASCIMENTO,Teorias e Tecnicas Psicoterapicas Gerais,E - E81,PSICOLOGIA
-Noturno,Quinta,MARILIA,Matrizes do Pensamento em Psicologia - Existencial Humanista,H - H72,PSICOLOGIA
-Noturno,Terça,ISMAEL FERREIRA DE ANDRADE MORAIS,Matrizes do Pensamento em Psicologia - Cognitiva Comportamental,H - H66,PSICOLOGIA
-Noturno,Sexta,MARILIA,Matrizes do Pensamento em Psicologia - Behaviorismo,H - H69,PSICOLOGIA
-Noturno,Segunda,HUGO GOUVEIA GONZAGA DE LIMA,Medidas e Avaliacao em Psicologia I,I - I52,PSICOLOGIA
-Noturno,Quinta,KAMILA SANTANA PIONTKOVSKY,Psicopatologia II,H - H73,PSICOLOGIA
-Noturno,Terça,KAMILA SANTANA PIONTKOVSKY,Analise Experimental do Comportamento,F - F17,PSICOLOGIA
-Noturno,Quinta,HUGO GOUVEIA GONZAGA DE LIMA,Teorias e Tecnicas Psicoterapicas Especiais,G - G7,PSICOLOGIA
-Noturno,Sexta,HUGO GOUVEIA GONZAGA DE LIMA,Medidas e Avaliacao em Psicologia III,H - H70,PSICOLOGIA
-Noturno,Quarta,GEISE PINHEIRO PINTO,Processos Psicologicos Basicos,H - H77,CIÊNCIA DA COMPUTAÇÃO
-Noturno,Sexta,DEIVSON LEONARDO SANTANA DA SILVA,Metodos Quantitativos,H - H71,PSICOLOGIA
-Noturno,Quarta,ISMAEL FERREIRA DE ANDRADE MORAIS,Desenvolvimento Humano II,H - H66,PSICOLOGIA
-Noturno,Segunda,GEISE PINHEIRO PINTO,Bases Biologicas do Comportamento,I - 53,PSICOLOGIA
-Noturno,Sexta,RAYANE SANTOS NASCIMENTO,"Psicologia, Ciencia e Profissao",H - H72,PSICOLOGIA
-Noturno,Quarta,HUGO GOUVEIA GONZAGA DE LIMA,Metodologia da Pesquisa em Psicologia,H - H69,ENGENHARIA CIVIL
-Noturno,Sexta,MOAB GARCIA PEREIRA,Materiais de Construcao Civil II,H - H73,ENGENHARIA CIVIL
-Noturno,Sexta,MOAB GARCIA PEREIRA,Estruturas de Concreto Armado I,I - I45,ENGENHARIA CIVIL
-Noturno,Terça,SARAH GREICY FERREIRA DE JESUS,Geologia e Mecanica dos Solos,D - D85,ENGENHARIA CIVIL
-Noturno,Quarta,MOAB GARCIA PEREIRA,Fundacoes,H - H70,ODONTOLOGIA
-Noturno,Segunda,LEANDRO CORREA BICHARA,Odontologia Cirurgica e Farmacoterapia,F - F17,ODONTOLOGIA
-Noturno,Quarta,BRUNO SILVA RANGEL,Odontologia Pre-Clinica - Agravos ao Esmalte e dentina,D - D85,ODONTOLOGIA
-Noturno,Terça,LEANDRO CORREA BICHARA,Odontologia Pre-Clinica - Propedeutica e Imaginologia,H - H77,ODONTOLOGIA
-Noturno,Terça,LOIZE CAROL SENA LIMA,Propedeutica Clinica Odontologica I,C - C89,ODONTOLOGIA
-Noturno,Sexta,SOFIA BAUER RIEGER,Fundamentos para Assistencia Odontologica I,I - I46,ODONTOLOGIA
-Noturno,Quarta,DENIS ALEXANDRE FURTADO,Propedeutica Clinica Odontologica II,H - H71,ODONTOLOGIA
-Noturno,Segunda,GENILSON MOURA GOMES,Fundamentos para Propedeutica Cirurgica II,I - 54,ODONTOLOGIA
-Noturno,Quinta,JUSSARA SANTOS VALENCA,Odontologia Pre-Clinica I,H - H76,ODONTOLOGIA
-Noturno,Sexta,LOIZE CAROL SENA LIMA,Fundamentos para Reabilitacao Oral I,I - I47,ODONTOLOGIA
-Noturno,Quinta,SOFIA BAUER RIEGER,Fundamentos para Atencao a Crianca I,H - H74,ODONTOLOGIA
-Noturno,Quarta,GENILSON MOURA GOMES,Propedeutica Clinica,H - H75,ODONTOLOGIA
-Noturno,Segunda,JUSSARA SANTOS VALENCA,Odontologia Pre-Clinica III,D - D88,ODONTOLOGIA
-Noturno,Quinta,JUCILEYDE CAIRES RIBEIRO,Clinica Integrada de Reabilitacao Oral I,H - H77,ODONTOLOGIA
-Noturno,Terça,JUCILEYDE CAIRES RIBEIRO,Clinica Integrada de Reabilitacao Oral II,H - H67,ODONTOLOGIA
-Noturno,Sexta,BRUNO SILVA RANGEL,Clinica Integrada de Assistencia Odontologica III,H - H76,ODONTOLOGIA
-Noturno,Segunda,BRUNO SILVA RANGEL,Fundamentos para Reabilitacao Oral III,I - 55,ODONTOLOGIA
-Noturno,Quinta,JOAO PAULO CAMPO DALL ORTO,Odontologia Pre-Clinica IV,H - H78,ODONTOLOGIA
-Noturno,Terça,DENIS ALEXANDRE FURTADO,Clinica Integrada de Assistencia Odontologica I,E - E79,ODONTOLOGIA
-Noturno,Quinta,BRUNO SILVA RANGEL,Clinica Integrada de Atencao ao Idoso,H - H66,ODONTOLOGIA
-Noturno,Sexta,LEANDRO CORREA BICHARA,Clinica Integrada de Atencao a Pessoa Com Deficiencia,H - H77,ODONTOLOGIA
-Noturno,Quarta,SOFIA BAUER RIEGER,Estudos Integrados dos Agravos em Saude Bucal,H - H72,ENFERMAGEM
-Noturno,Segunda,FABRÍCIO RODRIGUES FONSECA DE SÁ,Fundamentos Tecnicos de Enfermagem,G- G3,ENFERMAGEM
-Noturno,Quarta,FABRÍCIO RODRIGUES FONSECA DE SÁ,Fundamentos Tecnicos de Enfermagem,H - H73,ENFERMAGEM
-Noturno - EAD,Segunda,SUELEN ALVES SEGLIA,NUTRIÇÃO  3° e 4° semestre,I - I45,NUTRIÇÃO
-Noturno - EAD,Segunda,ELEN GOMES DE OLIVEIRA,ENFERMAGEM - 3° semestre,I - I46,ENFERMAGEM
-Noturno - EAD,Segunda,ISLAN DAMASCENA GOMES,BIOMEDICINA - 3° e 4° SEMESTRE,I - I47,BIOMEDICINA
-Noturno - EAD,Segunda,HILQUIAS SOUZA AGUILAR,Pedagogia 5°,I - I48,PEDAGOGIA
-Noturno - EAD,Segunda,MAIANNE MALACARNE RODRIGUES FARIAS,FARMÁCIA - 3° e 4° SEMESTRE,I - I49,FARMÁCIA
-Noturno - EAD,Segunda,KLEN JEFFERSON GUIMARAES SENA,FISIOTERAPIA - 3° e 4° SEMESTRE,I - I50,FISIOTERAPIA
-Noturno - EAD,Segunda,LUCAS FARIAS DE OLIVEIRA,Enfermagem - 4° Período,I - I51,ENFERMAGEM
-Noturno - EAD,Terça,NATAN BRITO SANTOS,Agronomia 5° e 6°,I - I45,AGRONOMIA
-Noturno - EAD,Terça,KLEN JEFFERSON GUIMARAES SENA,Fisioterapia - 10°,I - I46,FISIOTERAPIA
-Noturno - EAD,Terça,ARTHUR CARVALHO FRANCA,ADMINISTRAÇÃO / Ciencias Contabeis -      3/4° SEMESTRE,I - I47,ADM - CIÊNCIA C.
-Noturno - EAD,Terça,ADSON SANTANA MOURA,AGRONOMIA 3° e 4° SEM,I - I48,AGRONOMIA
-Noturno - EAD,Terça,RAFAEL PEREIRA LIMA,RECURSOS HUMANOS - 1° e  2° SEM,I - I49,RECURSOS HUMANOS
-Noturno - EAD,Terça,ELEN GOMES DE OLIVEIRA,Enfermagem 9°,I - I50,ENFERMAGEM
-Noturno - EAD,Terça,NOVO TUTOR,Educação Física Licenciatura / Bacharel - 1° e 2º,I - I51,EDUCAÇÃO FÍSICA
-Noturno - EAD,Terça,ELISNAK DE SOUSA MIRANDA,Farmácia - 1° e 2º semestre,I - I52,FARMÁCIA
-Noturno - EAD,Terça,HILQUIAS SOUZA AGUILAR,Pedagogia -    3° e 4° SEMESTRE,I - I53,PEDAGOGIA
-Noturno - EAD,Terça,LUCAS FARIAS DE OLIVEIRA,Enfermagem 10°,I - I54,ENFERMAGEM
-Noturno - EAD,Terça,SUELEN ALVES SEGLIA,"Sinergia de Saúde - 1° e 2º semestre - ENFERMAGEM
-+ NUTRI",H - H76,ENFERMAGEM + NUTRIÇÃO
-Noturno - EAD,Terça,ISLAN DAMASCENA GOMES,Sinergia de Saúde - 1° e 2º semestre BIOMED + FISIO,H - H78,BIOMEDICINA + FISIOTERAPIA
-Noturno - EAD,Quarta,ADSON SANTANA MOURA,CST EM SEGURANÇA DO TRABALHO - 1° e 2º SEM,I - I45,SEGURANÇA DO TRABALHO
-Noturno - EAD,Quarta,KLEN JEFFERSON GUIMARAES SENA,Fisioterapia    - 7° e 8°,I - I46,FISIOTERAPIA
-Noturno - EAD,Quarta,ABINADABE SANTOS OLIVEIRA,Engenharia Produção - 7° e 8°,I - I47,ENGENHARIA DE PRODUÇÃO
-Noturno - EAD,Quarta,ISLAN DAMASCENA GOMES,Biomedicina      -  7° e 8°,I - I48,BIOMEDICINA
-Noturno - EAD,Quarta,ELISNAK DE SOUSA MIRANDA,Farmácia - 7° e 8°,I - I49,FARMÁCIA
-Noturno - EAD,Quarta,ELEN GOMES DE OLIVEIRA,Enfermagem   -  7°,I - I50,ENFERMAGEM
-Noturno - EAD,Quarta,NOVO TUTOR,EDUCAÇÃO FISICA - 3°/4° SEMESTRE BACHAREL / Licenciatura,I - I51,EDUCAÇÃO FÍSICA
-Noturno - EAD,Quarta,SUELEN ALVES SEGLIA,Nutrição - 7° e 8°,I - I52,NUTRIÇÃO
-Noturno - EAD,Quarta,HILQUIAS SOUZA AGUILAR,Administração 7° e 8°,I - I53,NUTRIÇÃO
-Noturno - EAD,Quarta,DANILO DUARTE NERES,Engenharia Civil - 7° e 8°,I - I54,ENGENHARIA CIVIL
-Noturno - EAD,Quarta,LUCAS FARIAS DE OLIVEIRA,Enfermagem   - 8°,I - I55,ENFERMAGEM
-Noturno - EAD,Quarta,ANIZ BARCELOS ARAMUNI GONCALVES,Sinergia de Licenciatura - 1° e 2º semestre ( PEDAGOGIA ),D - D87,PEDAGOGIA
-Noturno - EAD,Quarta,NATAN BRITO SANTOS,Agronomia - 1° e 2º semestre,H -  H65,AGRONOMIA
-Noturno - EAD,Quarta,RAIZA SILVA SANTOS,Estética e Cosmética - 2º semestre,H -  H64,ESTÉTICA E COSMÉTICA
-Noturno - EAD,Quarta,EDIANE OLIVEIRA SOUZA,Ciências Biologicas                    1° e 2º SEM,H -  H67,CIÊNCIAS BIOLÓGICAS
-Noturno - EAD,Quarta,LAYZE COSTA RIBEIRO,Estética e Cosmética - 1°  semestre,H -  H76,ESTÉTICA E COSMÉTICA
-Noturno - EAD,Quarta,ARTHUR CARVALHO FRANCA,"Sinergia de Adm, Contábeis e Eco - 2º semestre",F - F16,ADM - CIÊNCIA C.
-Noturno - EAD,Quinta,LAYZE COSTA RIBEIRO,Superior  de tecnologia em Estética e Cosmética - 5° e 6°,I - I45,ESTÉTICA E COSMÉTICA
-Noturno - EAD,Quinta,KLEN JEFFERSON GUIMARAES SENA,Fisioterapia 5° e 6°,I - I46,FISIOTERAPIA
-Noturno - EAD,Quinta,ARTHUR CARVALHO FRANCA,Ciências Contábeis 5° e 6°,I - I47,CIÊNCIAS CONTÁBEIS
-Noturno - EAD,Quinta,ISLAN DAMASCENA GOMES,Biomedicina 5° e 6°,I - I48,BIOMEDICINA
-Noturno - EAD,Quinta,LUCAS FARIAS DE OLIVEIRA,Enfermagem 5°,I - I49,ENFERMAGEM
-Noturno - EAD,Quinta,ELEN GOMES DE OLIVEIRA,Enfermagem  6°,I - I50,ENFERMAGEM
-Noturno - EAD,Quinta,RAIZA SILVA SANTOS,ESTETICA E COSMETICA - 3° e 4°,I - I51,ESTÉTICA E COSMÉTICA
-Noturno - EAD,Quinta,SUELEN ALVES SEGLIA,Nutrição 5° e 6°,I - I52,NUTRIÇÃO
-Noturno - EAD,Quinta,HILQUIAS SOUZA AGUILAR,Administração 5° e 6°,I - I53,ADMINISTRAÇÃO
-Noturno - EAD,Quinta,MAIANNE MALACARNE RODRIGUES FARIAS,Farmácia 5° e 6°,I - I54,FARMÁCIA
-Noturno - EAD,Quinta,NAYANE DOS SANTOS RODRIGUES,Serviço social - 1° e 2º Sem.,I - I55,SERVIÇO SOCIAL
-Noturno - EAD,Quinta,TALIS ANTONIO ALMEIDA DA SILVA,ANALISE E DESENV. SISTEMAS  - 1° e 2º,B - LAB. INFO. 5,ANÁLISE E DESENV. SISTEMAS
-Noturno - EAD,Sexta,HILQUIAS SOUZA AGUILAR,ADMINISTRAÇÃO 3° e 4°,I - I55,ADMINISTRAÇÃO
+Noturno - EAD,Quarta,Abinadabe,Engenharia Produção - 8° e 9°,I - I47,Engenharia Produção
+Noturno - EAD,Terça,Adson,AGRONOMIA 3° e 4° SEM,I - I48,AGRONOMIA
+Noturno - EAD,Quarta,Adson,CST EM SEGURANÇA DO TRABALHO - 2° e 3º SEM,I - I45,CST EM SEGURANÇA DO TRABALHO
+Noturno - EAD,Terça,Anis,Pedagogia - 5° e 6° SEMESTRE,I - I53,PEDAGOGIA
+Noturno - EAD,Segunda,Aniz,Pedagogia 1° semestre,I - I52,PEDAGOGIA
+Noturno - EAD,Quarta,ANIZ,Sinergia de Licenciatura - 2° e 3º semestre ( PEDAGOGIA ),BLOCO H76,Sinergia de Licenciatura
+Noturno - EAD,Terça,Arthur,Ciencias Contabeis - 4/5° SEMESTRE,I - I47,CIENCIAS CONTABEIS
+Noturno - EAD,Quarta,Arthur,"Sinergia de Adm, Contábeis e Eco - 3° semestre",H - H77,"Sinergia de Adm, Contábeis e Eco"
+Noturno - EAD,Quinta,Arthur,Ciências Contábeis 6° e 7°,I - I47,Ciências Contábeis
+Noturno - EAD,Quarta,Danilo,Engenharia Civil - 8° e 9°,I - I54,Engenharia Civil
+Noturno - EAD,Segunda,Davi,Educação Física - Licenciatura - 5º Semestre,G - G10,EDUCAÇÃO FÍSICA
+Noturno - EAD,Terça,Davi,Educação Física Licenciatura / Bacharel - 2° e 3º,I - I51,EDUCAÇÃO FÍSICA
+Noturno - EAD,Quarta,Davi,EDUCAÇÃO FISICA - 4° SEMESTRE BACHAREL / Licenciatura,I - I51,EDUCAÇÃO FISICA
+Noturno - EAD,Quinta,Davi,EDUCAÇÃO FISICA - 1° SEMESTRE BACHAREL,I - I51,EDUCAÇÃO FISICA
+Noturno - EAD,Sexta,Davi;,EDUCAÇÃO FISICA - 5° SEMESTRE BACHAREL,I - I51,EDUCAÇÃO FISICA
+Noturno - EAD,Quarta,Ediane,Ciências Biologicas 2° e 3º SEM,G - G08,Ciências Biologicas
+Noturno - EAD,Segunda,Elen,ENFERMAGEM - 4° semestre,I - I46,ENFERMAGEM
+Noturno - EAD,Terça,Elen,ENFERMAGEM 3° semestre,H - H77,ENFERMAGEM
+Noturno - EAD,Quarta,Elen,Enfermagem - 8°,I - I50,Enfermagem
+Noturno - EAD,Quinta,Elen,Enfermagem 7°,I - I50,Enfermagem
+Noturno - EAD,Terça,Elisnak,Farmácia - 2° e 3º semestre,I - I52,FARMACIA
+Noturno - EAD,Quarta,Elisnak,Farmácia - 7° e 8°,I - I49,Farmácia
+Noturno - EAD,Segunda,Hilquias,Pedagogia 6°,I -  I48,PEDAGOGIA
+Noturno - EAD,Terça,Hilquias,ADMINISTRAÇÃO 4° e 5°,I - I49,ADMINISTRAÇÃO
+Noturno - EAD,Quarta,HILQUIAS,Administração 8°,I - I53,Administração
+Noturno - EAD,Quinta,HILQUIAS,Administração 6° e 7°,I - I53,Administração
+Noturno - EAD,Sexta,HILQUIAS,ADMINISTRAÇÃO 4° e 5°,I - I53,ADMINISTRAÇÃO
+Noturno - EAD,Segunda,Islan,BIOMEDICINA - 4° e 5° SEMESTRE,I - I47,BIOMEDICINA
+Noturno - EAD,Terça,Islan,BIOMEDICINA 2° e 3°,G - G10,BIOMEDICINA
+Noturno - EAD,Quarta,Islan,Biomedicina - 7° e 8°,I - I48,Biomedicina
+Noturno - EAD,Quinta,Islan,Biomedicina 6°,I - I48,Biomedicina
+Noturno - EAD,Segunda,Klen,FISIOTERAPIA- 4° e 5° SEMESTRE,I - I50,FISIOTERAPIA
+Noturno - EAD,Terça,Klen,Fisioterapia 2° e 3°,I - I50,FISIOTERAPIA
+Noturno - EAD,Quarta,Klen,Fisioterapia - 9°,I - I46,Fisioterapia
+Noturno - EAD,Quinta,Klen,Fisioterapia 6° e 7°,I - I46,Fisioterapia
+Noturno - EAD,Sexta,Klen,Fisioterapia - 8°,I - I50,FISIOTERAPIA
+Noturno - EAD,Quarta,Layze,Estética e Cosmética - 2° semestre,G - G09,Estética e Cosmética
+Noturno - EAD,Quinta,Layze,Superior de tecnologia em Estética e Cosmética - 6,I - I45,Estética e Cosmética
+Noturno - EAD,Segunda,Lucas,Enfermagem - 5° Periodo,I - I51,ENFERMAGEM
+Noturno - EAD,Quarta,Lucas,Enfermagem - 9°,I - I55,Enfermagem 
+Noturno - EAD,Quinta,Lucas,Enfermagem 6°,I - I49,Enfermagem
+Noturno - EAD,Segunda,MAIANNE,FARMACIA - 4° e 5° SEMESTRE,I - I49,FARMACIA
+Noturno - EAD,Quinta,Maianne,Farmácia 6° e 7°,I - I54,Farmácia
+Noturno - EAD,Terça,Natan,Agronomia 6° e 7°,I - I45,AGRONOMIA
+Noturno - EAD,Quarta,Natan,Agronomia - 2° e 3º semestre,G - G07,Agronomia
+Noturno - EAD,Quinta,Nayane,Serviço social - 2° e 3º Sem.,I - I55,Serviço social
+Noturno - EAD,Terça,Rafael,RECURSOS HUMANOS - 2° e 3° SEM,I - I55,RECURSOS HUMANOS
+Noturno - EAD,Terça,Raiza,Estética e Cosmética - 1º semestre,I - I46,ESTÉTICA E COSMÉTICA
+Noturno - EAD,Quarta,Raiza,Estética e Cosmética - 3º semestre,G - G10,Estética e Cosmética
+Noturno - EAD,Quinta,Rayza,ESTETICA E COSMETICA - 4° e 5°,G - G10,ESTETICA E COSMETICA
+Noturno - EAD,Segunda,Sem Tutor,ENFERMAGEM + NUTRIÇÃO - 1° SEMESTRE,H - H76,ENFERMAGEM + NUTRIÇÃO
+Noturno - EAD,Segunda,Sem Tutor,FISIOTERAPIA + BIOMEDICINA - 1° semestre,H - H77,FISIOTERAPIA + BIOMEDICINA
+Noturno - EAD,Segunda,Sem Tutor,ADM + CIENCIAS CONTABEIS - 1° semestre,H - H78,ADM + CIENCIAS CONTABEIS
+Noturno - EAD,Segunda,Suelen,NUTRIÇÃO 4° e 5° semestre,I - I45,NUTRIÇÃO
+Noturno - EAD,Terça,Suelen,Nutrição 3° e 4°,I - I54,NUTRIÇÃO
+Noturno - EAD,Quarta,Suelen,Nutrição - 8°,I - I52,Nutrição
+Noturno - EAD,Quinta,Suelen,Nutrição 6° e 7°,I - I52,Nutrição
+Noturno - EAD,Quarta,Talis,ANALISE E DESENV. SISTEMAS - 1º semestre,LABORATÓRIO INFORMATICA 05,ANALISE E DESENV. SISTEMAS
+Noturno - EAD,Quinta,Talis,ANALISE E DESENV. SISTEMAS - 2° e 3º semestre,LABORATÓRIO INFORMATICA 05,ANALISE E DESENV. SISTEMAS
