@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encontre sua sala na Faculdade Anhanguera de Teixeira de Freitas. Consulte horários, salas e professores.">
+  <meta name="keywords" content="Anhanguera, Teixeira de Freitas, sala, horários, professores, faculdade">
+  <meta name="author" content="Luis Eduardo Andrade Da Silva - Técnico de Informática Jr.">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <title>Encontre sua Sala - Anhanguera Teixeira de Freitas - BA</title>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#"><img src="images/logotipo.svg" alt="Logotipo"></a>
+  </header>
+  <section class="sectionCenter">
+    <h1>QUADRO DE HORÁRIOS</h1>
+    <h2>FACULDADE ANHANGUERA</h2>
+  </section>
+  <div class="container">
+    <div class="section" id="lista-section">
+      <div class="headeDisplay">
+        <h2 id="lista-titulo">Salas</h2>
+      </div>
+      <ul id="lista-opcoes"></ul>
+    </div>
+  </div>
+  
+  <div id="modal-localizacao" class="modal hidden">
+    <div class="modal-content">
+      <h2>Escolha seu local atual</h2>
+      <select id="ponto-referencia">
+        <option value="Guarita">Guarita</option>
+        <option value="Cantina">Cantina</option>
+        <option value="Biblioteca">Biblioteca</option>
+      </select>
+      <button onclick="mostrarDirecoes()">Ver Direções</button>
+      <button onclick="fecharModal()">Fechar</button>
+    </div>
+  </div>
+
+  <div id="direcoes-container" class="hidden">
+    <h2>Direções</h2>
+    <ul id="lista-direcoes"></ul>
+    <button onclick="fecharDirecoes()">Fechar</button>
+  </div>
+
+  <script>
+    let dados = [];
+    let direcoes = {};
+
+    function carregarDados() {
+      Papa.parse('dados.csv', {
+        download: true,
+        header: true,
+        complete: function(results) {
+          dados = results.data;
+          listarSalas();
+        },
+        error: function(error) {
+          console.error('Erro ao carregar os dados:', error);
+        }
+      });
+    }
+
+    function carregarDirecoes() {
+      fetch('direcoes.json')
+        .then(response => response.json())
+        .then(data => direcoes = data)
+        .catch(error => console.error('Erro ao carregar direções:', error));
+    }
+
+    function listarSalas() {
+      const lista = document.getElementById('lista-opcoes');
+      lista.innerHTML = '';
+      
+      dados.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = `${item.sala} - ${item.professor} <button onclick="abrirModal('${item.sala}')">Localizar</button>`;
+        lista.appendChild(li);
+      });
+    }
+
+    function abrirModal(sala) {
+      document.getElementById('modal-localizacao').classList.remove('hidden');
+      document.getElementById('modal-localizacao').setAttribute('data-sala', sala);
+    }
+
+    function fecharModal() {
+      document.getElementById('modal-localizacao').classList.add('hidden');
+    }
+
+    function mostrarDirecoes() {
+      const sala = document.getElementById('modal-localizacao').getAttribute('data-sala');
+      const ponto = document.getElementById('ponto-referencia').value;
+      const listaDirecoes = document.getElementById('lista-direcoes');
+      listaDirecoes.innerHTML = '';
+      
+      if (direcoes[ponto] && direcoes[ponto][sala]) {
+        direcoes[ponto][sala].forEach(passo => {
+          const li = document.createElement('li');
+          li.textContent = passo;
+          listaDirecoes.appendChild(li);
+        });
+      } else {
+        listaDirecoes.innerHTML = '<li>Direções não encontradas</li>';
+      }
+
+      document.getElementById('modal-localizacao').classList.add('hidden');
+      document.getElementById('direcoes-container').classList.remove('hidden');
+    }
+
+    function fecharDirecoes() {
+      document.getElementById('direcoes-container').classList.add('hidden');
+    }
+
+    window.onload = function() {
+      carregarDados();
+      carregarDirecoes();
+    };
+  </script>
+</body>
+</html>
