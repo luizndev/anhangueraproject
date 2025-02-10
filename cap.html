@@ -30,141 +30,43 @@
     </div>
   </div>
   
-  <div id="direcoes-container" class="hidden">
-    <h2>Direções</h2>
-    <div id="arrow-container"></div>
-    <button onclick="fecharDirecoes()">Fechar</button>
-  </div>
-
   <div id="capturar-localizacao">
     <h2>Capturar Localização</h2>
-    <label for="sala-nome">Nome da Sala:</label>
-    <input type="text" id="sala-nome" placeholder="Digite o nome da sala">
-    <button onclick="capturarLocalizacao()">Capturar</button>
+    <button id="btn-localizacao">Capturar Minha Localização</button>
     <p id="coordenadas"></p>
   </div>
 
   <script>
-    let dados = [];
-    let salasGeo = {};
-    let userPosition = { latitude: 0, longitude: 0 };
-    let targetPosition = { latitude: 0, longitude: 0 };
-    
-    function carregarDados() {
-      Papa.parse('dados.csv', {
-        download: true,
-        header: true,
-        complete: function(results) {
-          dados = results.data;
-          listarSalas();
-        },
-        error: function(error) {
-          console.error('Erro ao carregar os dados:', error);
-        }
-      });
-    }
-
-    function carregarGeolocalizacoes() {
-      fetch('salas.json')
-        .then(response => response.json())
-        .then(data => salasGeo = data)
-        .catch(error => console.error('Erro ao carregar geolocalizações:', error));
-    }
-
-    function listarSalas() {
-      const lista = document.getElementById('lista-opcoes');
-      lista.innerHTML = '';
-      
-      dados.forEach(item => {
-        const li = document.createElement('li');
-        li.innerHTML = `${item.sala} - ${item.professor} <button onclick="iniciarNavegacao('${item.sala}')">📍</button>`;
-        lista.appendChild(li);
-      });
-    }
-
-    function iniciarNavegacao(sala) {
-      if (!salasGeo[sala]) {
-        alert('Localização da sala não encontrada.');
-        return;
-      }
-      targetPosition = salasGeo[sala];
-      document.getElementById('direcoes-container').classList.remove('hidden');
-      rastrearUsuario();
-      renderizarSeta3D();
-    }
-
-    function fecharDirecoes() {
-      document.getElementById('direcoes-container').classList.add('hidden');
-    }
-
-    function rastrearUsuario() {
+    document.getElementById('btn-localizacao').addEventListener('click', () => {
       if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(position => {
-          userPosition.latitude = position.coords.latitude;
-          userPosition.longitude = position.coords.longitude;
-          atualizarDirecao();
-        }, error => {
-          console.error('Erro ao obter localização:', error);
-        });
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            document.getElementById('coordenadas').innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
+          },
+          error => {
+            let message = 'Erro ao capturar localização. ';
+            switch (error.code) {
+              case error.PERMISSION_DENIED:
+                message += 'Permissão negada. Ative a localização nas configurações.';
+                break;
+              case error.POSITION_UNAVAILABLE:
+                message += 'Informação de localização indisponível.';
+                break;
+              case error.TIMEOUT:
+                message += 'O tempo para capturar a localização expirou. Tente novamente.';
+                break;
+              default:
+                message += 'Erro desconhecido.';
+            }
+            alert(message);
+          }
+        );
       } else {
         alert('Geolocalização não suportada no seu navegador.');
       }
-    }
-
-    function calcularAngulo() {
-      let deltaY = targetPosition.latitude - userPosition.latitude;
-      let deltaX = targetPosition.longitude - userPosition.longitude;
-      return Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-    }
-
-    function atualizarDirecao() {
-      let angulo = calcularAngulo();
-      document.querySelector('#arrow-container canvas').style.transform = `rotate(${angulo}deg)`;
-    }
-
-    function renderizarSeta3D() {
-      const container = document.getElementById('arrow-container');
-      container.innerHTML = '';
-      
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-      const renderer = new THREE.WebGLRenderer();
-      renderer.setSize(200, 200);
-      container.appendChild(renderer.domElement);
-      
-      const geometry = new THREE.ConeGeometry(0.5, 1, 32);
-      const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-      const arrow = new THREE.Mesh(geometry, material);
-      scene.add(arrow);
-      
-      camera.position.z = 3;
-      
-      function animate() {
-        requestAnimationFrame(animate);
-        arrow.rotation.y = calcularAngulo() * (Math.PI / 180);
-        renderer.render(scene, camera);
-      }
-      animate();
-    }
-
-    function capturarLocalizacao() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(position => {
-          const latitude = position.coords.latitude;
-          const longitude = position.coords.longitude;
-          document.getElementById('coordenadas').innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
-        }, error => {
-          console.error('Erro ao capturar localização:', error);
-        });
-      } else {
-        alert('Geolocalização não suportada no seu navegador.');
-      }
-    }
-
-    window.onload = function() {
-      carregarDados();
-      carregarGeolocalizacoes();
-    };
+    });
   </script>
 </body>
 </html>
