@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encontre sua sala na Faculdade Anhanguera de Teixeira de Freitas. Consulte horários, salas e professores.">
+  <meta name="keywords" content="Anhanguera, Teixeira de Freitas, sala, horários, professores, faculdade">
+  <meta name="author" content="Luis Eduardo Andrade Da Silva - Técnico de Informática Jr.">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <title>Encontre sua Sala - Anhanguera Teixeira de Freitas - BA</title>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#"><img class="" src="images/logotipo.svg" alt=""></a>
+  </header>
+  <section class="sectionCenter">
+    <h1>QUADRO DE HORÁRIOS</h1>
+    <h2>FACULDADE ANHANGUERA</h2>
+  </section>
+  <div class="container">
+    <div class="section" id="periodo-section">
+      <h2>Selecione um turno:</h2>
+      <div class="displayButtons">
+        <button class="btn" onclick="selecionarPeriodo('Matutino')">Matutino</button>
+        <button class="btn" onclick="selecionarPeriodo('Noturno')">Noturno</button>
+        <button class="btn" onclick="selecionarPeriodo('Noturno - EAD')">Noturno - EAD</button>
+      </div>
+    </div>
+
+    <div class="section hidden" id="dia-section">
+      <div class="headeDisplay">
+        <h2>Selecione um dia da semana:</h2>
+        <button class="buttonReturn" onclick="voltar('periodo')">Voltar</button>
+      </div>
+      <div class="displayButtons">
+        <button class="btn" onclick="selecionarDia('Segunda')">Segunda-Feira</button>
+        <button class="btn" onclick="selecionarDia('Terça')">Terça-Feira</button>
+        <button class="btn" onclick="selecionarDia('Quarta')">Quarta-Feira</button>
+        <button class="btn" onclick="selecionarDia('Quinta')">Quinta-Feira</button>
+        <button class="btn" onclick="selecionarDia('Sexta')">Sexta-Feira</button>
+      </div>
+    </div>
+
+    <div class="section hidden" id="opcao-section">
+      <div class="headeDisplay">
+        <h2>Localize sua sala, por:</h2>
+        <button class="buttonReturn" onclick="voltar('dia')">Voltar</button>
+      </div>
+      <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()">
+      <div id="lista-opcoes"></div>
+    </div>
+
+    <div class="section hidden" id="lista-section">
+      <div class="headeDisplay">
+        <h2 id="lista-titulo"></h2>
+        <button class="buttonReturn" onclick="voltar('opcao')">Voltar</button>
+      </div>
+      <ul id="lista-opcoes"></ul>
+    </div>
+  </div>
+
+  <script>
+    let dados = [];
+
+    function carregarDados() {
+      Papa.parse('dados.csv', {
+        download: true,
+        header: true,
+        complete: function(results) {
+          dados = results.data;
+        },
+        error: function(error) {
+          console.error('Erro ao carregar os dados:', error);
+        }
+      });
+    }
+
+    window.onload = carregarDados;
+
+    let periodoSelecionado = '';
+    let diaSelecionado = '';
+
+    function selecionarPeriodo(periodo) {
+      periodoSelecionado = periodo;
+      document.getElementById('periodo-section').classList.add('hidden');
+      document.getElementById('dia-section').classList.remove('hidden');
+    }
+
+    function selecionarDia(dia) {
+      diaSelecionado = dia;
+      document.getElementById('dia-section').classList.add('hidden');
+      document.getElementById('opcao-section').classList.remove('hidden');
+      mostrarCursos();
+    }
+
+    function mostrarCursos() {
+      const cursosFiltrados = dados.filter(d => d.curso === periodoSelecionado && d.dia === diaSelecionado);
+
+      const lista = document.getElementById('lista-opcoes');
+      lista.innerHTML = '';
+
+      const cursos = [...new Set(cursosFiltrados.map(item => item.faculdade))];
+
+      cursos.forEach(curso => {
+        const li = document.createElement('li');
+        li.textContent = curso;
+        
+        li.onclick = () => mostrarProfessores(curso);
+
+        lista.appendChild(li);
+      });
+    }
+
+    function mostrarProfessores(curso) {
+      const professoresFiltrados = dados.filter(item => 
+        item.faculdade === curso && 
+        item.curso === periodoSelecionado && 
+        item.dia === diaSelecionado
+      );
+
+      const lista = document.getElementById('lista-opcoes');
+      lista.innerHTML = '';
+
+      professoresFiltrados.forEach(item => {
+        const li = document.createElement('li');
+        
+        const professorDiv = document.createElement('div');
+        professorDiv.textContent = item.professor;
+        professorDiv.style.fontWeight = 'bold';
+
+        const detalhesDiv = document.createElement('div');
+        detalhesDiv.className = "descricaoDiv";
+        detalhesDiv.innerHTML = `Disciplina: ${item.disciplina} <br> Sala: ${item.sala}`;
+        
+        li.appendChild(professorDiv);
+        li.appendChild(detalhesDiv);
+        
+        lista.appendChild(li);
+      });
+    }
+
+    function voltar(passo) {
+      switch (passo) {
+        case 'periodo':
+          document.getElementById('dia-section').classList.add('hidden');
+          document.getElementById('periodo-section').classList.remove('hidden');
+          break;
+        case 'dia':
+          document.getElementById('opcao-section').classList.add('hidden');
+          document.getElementById('dia-section').classList.remove('hidden');
+          break;
+        case 'opcao':
+          document.getElementById('lista-section').classList.add('hidden');
+          document.getElementById('opcao-section').classList.remove('hidden');
+          break;
+      }
+    }
+
+    function filtrarLista() {
+      const filtro = document.getElementById('filtro-input').value.toLowerCase();
+      const lista = document.getElementById('lista-opcoes');
+      const itens = lista.getElementsByTagName('li');
+
+      for (let i = 0; i < itens.length; i++) {
+        const itemTexto = itens[i].textContent || itens[i].innerText;
+        if (itemTexto.toLowerCase().includes(filtro)) {
+          itens[i].style.display = '';
+        } else {
+          itens[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
