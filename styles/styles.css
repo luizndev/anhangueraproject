@@ -332,3 +332,8 @@ footer{
     transform: rotate(90deg);
   }
 }
+
+
+.lista-opcoes{
+    width: 95%
+}
