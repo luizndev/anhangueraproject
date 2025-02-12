@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-  <title>Encontre sua Sala - Anhanguera Teixeira de Freitas - BA</title>
+  <title>Faculdade Anhanguera | Encontre sua Sala</title>
 </head>
 <body>
   <header class="navbar">
@@ -18,14 +18,16 @@
   </header>
   <section class="sectionCenter">
     <h1>QUADRO DE HORÁRIOS</h1>
-    <h2>FACULDADE ANHANGUERA</h2>
+    <h2>FACULDADE ANHANGUERA DE TEIXEIRA DE FREITAS - BA</h2>
   </section>
     <!-- LOADING -->
-    <div id="loading" class="loading"><img src="spinner.svg" alt=""><span>Carregando...</span></div>
+    <div id="loading" class="loading"><div class="loader"></div><span>Carregando...</span></div>
 
   <div class="container hidden" id="conteudo">
     <div class="section" id="periodo-section">
-      <h2>Selecione um turno:</h2>
+      <div class="headeDisplay">
+        <h4>Selecione um turno:</h4>
+      </div>
       <div class="displayButtons">
         <button class="btn" onclick="selecionarPeriodo('Matutino')">Matutino</button>
         <button class="btn" onclick="selecionarPeriodo('Noturno')">Noturno</button>
@@ -35,8 +37,8 @@
 
     <div class="section hidden" id="dia-section">
       <div class="headeDisplay">
-        <h2>Selecione um dia da semana:</h2>
-        <button class="buttonReturn" onclick="voltar('periodo')">Voltar</button>
+        <h4>Selecione um dia da semana:</h4>
+        <button class="buttonReturn" onclick="voltar('periodo')"><img src="./images/seta.svg" alt=""> Voltar</button>
       </div>
       <div class="displayButtons">
         <button class="btn" onclick="selecionarDia('Segunda')">Segunda-Feira</button>
@@ -49,8 +51,8 @@
 
     <div class="section hidden" id="opcao-section">
       <div class="headeDisplay">
-        <h2>Localize sua sala, por:</h2>
-        <button class="buttonReturn" onclick="voltar('dia')">Voltar</button>
+        <h4>Localize sua sala, por:</h4>
+        <button class="buttonReturn" onclick="voltar('dia')"><img src="./images/seta.svg" alt=""> Voltar</button>
       </div>
       <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()">
       <div id="lista-opcoes"></div>
@@ -59,11 +61,15 @@
     <div class="section hidden" id="lista-section">
       <div class="headeDisplay">
         <h2 id="lista-titulo"></h2>
-        <button class="buttonReturn" onclick="voltar('opcao')">Voltar</button>
+        <button class="buttonReturn" onclick="voltar('opcao')"><img src="./images/seta.svg" alt=""> Voltar</button>
       </div>
       <ul id="lista-opcoes"></ul>
     </div>
   </div>
+  <footer>
+    <a href="#"><img class="" src="images/logotipo.svg" alt=""></a>
+    <span>© Copyright 2025 Todos os direitos reservados. Feito por <a href="https://luizndev.vercel.app">Luis Eduardo Andrade Da Silva</a></span>
+  </footer>
 
   <script>
     let dados = [];
@@ -117,6 +123,7 @@
 
       cursos.forEach(curso => {
         const li = document.createElement('li');
+        li.classList.add('categoryName');
         li.textContent = curso;
         
         li.onclick = () => mostrarProfessores(curso);
@@ -137,13 +144,15 @@
 
       professoresFiltrados.forEach(item => {
         const li = document.createElement('li');
+        li.classList.add('list');
         
         const professorDiv = document.createElement('div');
         professorDiv.textContent = item.professor;
         professorDiv.style.fontWeight = 'bold';
+        professorDiv.classList.add('nameProfessor');
 
         const detalhesDiv = document.createElement('div');
-        detalhesDiv.className = "descricaoDiv";
+        detalhesDiv.className = "descricaoDiv2";
         detalhesDiv.innerHTML = `Disciplina: ${item.disciplina} <br> Sala: ${item.sala}`;
         
         li.appendChild(professorDiv);
