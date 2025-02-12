@@ -24,6 +24,7 @@ body {
     border-radius: 10px;
   }
   .section {
+    width: 95%;
     margin-bottom: 20px;
   }
   .btn {
@@ -150,6 +151,7 @@ body {
 .sectionCenter h2{
     font-size: 18px;
     font-weight: 300;
+    text-align: center;
     color: black;
 }
 
@@ -198,7 +200,7 @@ font-size: 17px;
     cursor: pointer;
     background: transparent;
     border: 1px solid rgb(29, 29, 29);
-    width: 95%;
+    width: 90%;
     outline: none;
     color: black;
 }
@@ -215,7 +217,7 @@ font-size: 17px;
     color: #ffffff;
     font-weight: 600;
     border: none;
-    width: 94%;
+    width: 90%;
     list-style: none;
     font-size: 15px;
     border: 1px solid #F94D12;
@@ -335,5 +337,5 @@ footer{
 
 
 .lista-opcoes{
-    width: 95%
+    width: 80%
 }
