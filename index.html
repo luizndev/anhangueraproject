@@ -20,7 +20,10 @@
     <h1>QUADRO DE HORÁRIOS</h1>
     <h2>FACULDADE ANHANGUERA</h2>
   </section>
-  <div class="container">
+    <!-- LOADING -->
+    <div id="loading" class="loading"><img src="spinner.svg" alt=""><span>Carregando...</span></div>
+
+  <div class="container hidden" id="conteudo">
     <div class="section" id="periodo-section">
       <h2>Selecione um turno:</h2>
       <div class="displayButtons">
@@ -66,17 +69,25 @@
     let dados = [];
 
     function carregarDados() {
-      Papa.parse('dados.csv', {
-        download: true,
-        header: true,
-        complete: function(results) {
-          dados = results.data;
-        },
-        error: function(error) {
-          console.error('Erro ao carregar os dados:', error);
-        }
-      });
+      document.getElementById("loading").classList.remove("hidden"); // Exibe o loading
+
+      fetch('https://script.googleusercontent.com/macros/echo?user_content_key=MuZdrZn_BnzkPkSMfgPUgnAEIMn0ki3d9VfiNieqItNkM-Is85rmaBeGiabNI0VSvVGrSp1CXFN4NvImCey3EVBgOPJh0_rBm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnCtDcrGfNtifN0-uv-et6u5vj9-4qx9vXcAOB2mkajrqMRjMKK68bsLQoIt_bWooaLwSiB3zB22N8qUeG8VAlHVIPxf_EXerSdz9Jw9Md8uu&lib=MCd6G0I70DQDBh0-FnOq14CZMXI6_oa1N')
+        .then(response => response.json())
+        .then(data => {
+          dados = data.data; 
+          console.log("Dados carregados:", dados);
+
+          document.getElementById("loading").classList.add("hidden"); // Oculta o loading
+          document.getElementById("conteudo").classList.remove("hidden"); // Exibe o conteúdo
+        })
+        .catch(error => {
+          console.error("Erro ao carregar os dados:", error);
+          document.getElementById("loading").textContent = "Erro ao carregar os dados.";
+        });
     }
+
+
+
 
     window.onload = carregarDados;
 
