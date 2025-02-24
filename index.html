@@ -94,7 +94,7 @@
     function carregarDados() {
       document.getElementById("loading").classList.remove("hidden");
 
-      fetch('URL_DO_SEU_GOOGLE_SHEETS_AQUI')
+      fetch('https://script.googleusercontent.com/macros/echo?user_content_key=J6nFT3zpSjyckHMxUR9bt2hCglbvKazfz-3BUmNuC7biNPjtZ1NEEsqRXU0ZOWp2saUJHaAf1CzD-mvz1rgRK3MWKwd9Gnmsm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnCtDcrGfNtifN0-uv-et6u5vj9-4qx9vXcAOB2mkajrqMRjMKK68bsLQoIt_bWooaLwSiB3zB22N8qUeG8VAlHVIPxf_EXerSdz9Jw9Md8uu&lib=MCd6G0I70DQDBh0-FnOq14CZMXI6_oa1N')
         .then(response => response.json())
         .then(data => {
           dados = data.data || [];
