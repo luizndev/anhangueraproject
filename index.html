@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
   <meta name="description" content="Encontre sua sala na Faculdade Anhanguera de Teixeira de Freitas. Consulte horários, salas e professores.">
   <meta name="keywords" content="Anhanguera, Teixeira de Freitas, sala, horários, professores, faculdade">
   <meta name="author" content="Luis Eduardo Andrade Da Silva - Técnico de Informática Jr.">
@@ -15,22 +14,13 @@
 </head>
 <body>
   <header class="navbar">
-    <a href="https://teixeiradefreitasanhanguera-ess.vercel.app/">
-      <img src="images/logotipo.svg" alt="Logotipo Anhanguera">
-    </a>
+    <a href="#"><img class="" src="images/logotipo.svg" alt=""></a>
   </header>
-
   <section class="sectionCenter">
     <h1>QUADRO DE HORÁRIOS</h1>
     <h2>FACULDADE ANHANGUERA <br> TEIXEIRA DE FREITAS - BA</h2>
   </section>
-
-  <!-- LOADING -->
-  <div id="loading" class="loading">
-    <div class="loader"></div>
-    <span>Carregando...</span>
-  </div>
-
+  <div id="loading" class="loading"><div class="loader"></div><span>Carregando...</span></div>
   <div class="container hidden" id="conteudo">
     <div class="section" id="periodo-section">
       <div class="headeDisplay">
@@ -46,9 +36,7 @@
     <div class="section hidden" id="dia-section">
       <div class="headeDisplay">
         <h4>Selecione um dia da semana:</h4>
-        <button class="buttonReturn" onclick="voltar('periodo')">
-          <img src="./images/seta.svg" alt=""> Voltar
-        </button>
+        <button class="buttonReturn" onclick="voltar('periodo')"><img src="./images/seta.svg" alt=""> Voltar</button>
       </div>
       <div class="displayButtons">
         <button class="btn" onclick="selecionarDia('Segunda')">Segunda-Feira</button>
@@ -62,9 +50,7 @@
     <div class="section hidden" id="opcao-section">
       <div class="headeDisplay">
         <h4>Localize sua sala, por:</h4>
-        <button class="buttonReturn" onclick="voltar('dia')">
-          <img src="./images/seta.svg" alt=""> Voltar
-        </button>
+        <button class="buttonReturn" onclick="voltar('dia')"><img src="./images/seta.svg" alt=""> Voltar</button>
       </div>
       <input type="text" id="filtro-input" placeholder="Filtre aqui por Professor(a)/Disciplina" oninput="filtrarLista()">
       <div id="lista-opcoes"></div>
@@ -73,41 +59,40 @@
     <div class="section hidden" id="lista-section">
       <div class="headeDisplay">
         <h2 id="lista-titulo"></h2>
-        <button class="buttonReturn" onclick="voltar('opcao')">
-          <img src="./images/seta.svg" alt=""> Voltar
-        </button>
+        <button class="buttonReturn" onclick="voltar('opcao')"><img src="./images/seta.svg" alt=""> Voltar</button>
       </div>
-      <ul id="lista-opcoes-lista"></ul>
+      <ul id="lista-opcoes"></ul>
     </div>
   </div>
-
   <footer>
-    <a href="#"><img src="images/logotipo.svg" alt="Logotipo"></a>
-    <span>© Copyright 2025 Todos os direitos reservados. Feito por 
-      <a href="https://luizndev.vercel.app">Luis Eduardo Andrade Da Silva</a>
-    </span>
+    <a href="#"><img class="" src="images/logotipo.svg" alt=""></a>
+    <span>© Copyright 2025 Todos os direitos reservados. Feito por <a href="https://luizndev.vercel.app">Luis Eduardo Andrade Da Silva</a></span>
   </footer>
 
   <script>
     let dados = [];
+    var ver = document.querySelector('.ver');
 
     function carregarDados() {
-      document.getElementById("loading").classList.remove("hidden");
+      document.getElementById("loading").classList.remove("hidden"); // Exibe o loading
 
-      fetch('https://script.googleusercontent.com/macros/echo?user_content_key=J6nFT3zpSjyckHMxUR9bt2hCglbvKazfz-3BUmNuC7biNPjtZ1NEEsqRXU0ZOWp2saUJHaAf1CzD-mvz1rgRK3MWKwd9Gnmsm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnCtDcrGfNtifN0-uv-et6u5vj9-4qx9vXcAOB2mkajrqMRjMKK68bsLQoIt_bWooaLwSiB3zB22N8qUeG8VAlHVIPxf_EXerSdz9Jw9Md8uu&lib=MCd6G0I70DQDBh0-FnOq14CZMXI6_oa1N')
+      fetch('https://script.googleusercontent.com/macros/echo?user_content_key=MuZdrZn_BnzkPkSMfgPUgnAEIMn0ki3d9VfiNieqItNkM-Is85rmaBeGiabNI0VSvVGrSp1CXFN4NvImCey3EVBgOPJh0_rBm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnCtDcrGfNtifN0-uv-et6u5vj9-4qx9vXcAOB2mkajrqMRjMKK68bsLQoIt_bWooaLwSiB3zB22N8qUeG8VAlHVIPxf_EXerSdz9Jw9Md8uu&lib=MCd6G0I70DQDBh0-FnOq14CZMXI6_oa1N')
         .then(response => response.json())
         .then(data => {
-          dados = data.data || [];
+          dados = data.data; 
           console.log("Dados carregados:", dados);
 
-          document.getElementById("loading").classList.add("hidden");
-          document.getElementById("conteudo").classList.remove("hidden");
+          document.getElementById("loading").classList.add("hidden"); // Oculta o loading
+          document.getElementById("conteudo").classList.remove("hidden"); // Exibe o conteúdo
         })
         .catch(error => {
           console.error("Erro ao carregar os dados:", error);
-          document.getElementById("loading").innerHTML = "<span>Erro ao carregar os dados.</span>";
+          document.getElementById("loading").textContent = "Erro ao carregar os dados.";
         });
     }
+
+
+
 
     window.onload = carregarDados;
 
@@ -128,32 +113,91 @@
     }
 
     function mostrarCursos() {
+      const cursosFiltrados = dados.filter(d => d.curso === periodoSelecionado && d.dia === diaSelecionado);
+
       const lista = document.getElementById('lista-opcoes');
       lista.innerHTML = '';
 
-      dados.forEach(item => {
-        if (item.dia === diaSelecionado && item.curso === periodoSelecionado) {
-          const li = document.createElement('li');
-          li.textContent = `${item.faculdade} - ${item.professor}`;
-          li.onclick = () => alert(`Disciplina: ${item.disciplina}, Sala: ${item.sala}`);
-          lista.appendChild(li);
-        }
+      const cursos = [...new Set(cursosFiltrados.map(item => item.faculdade))];
+
+      cursos.forEach(curso => {
+        const li = document.createElement('li');
+        li.classList.add('categoryName');
+        li.textContent = curso;
+        
+        li.onclick = () => mostrarProfessores(curso);
+
+        lista.appendChild(li);
+      });
+    }
+
+    function mostrarProfessores(curso) {
+      const professoresFiltrados = dados.filter(item => 
+        item.faculdade === curso && 
+        item.curso === periodoSelecionado && 
+        item.dia === diaSelecionado
+      );
+
+      const lista = document.getElementById('lista-opcoes');
+      lista.innerHTML = '';
+
+      professoresFiltrados.forEach(item => {
+        const li = document.createElement('li');
+        li.classList.add('list');
+        
+        const professorDiv = document.createElement('div');
+        professorDiv.textContent = item.professor;
+        professorDiv.style.fontWeight = 'bold';
+        professorDiv.classList.add('nameProfessor');
+
+        const detalhesDiv = document.createElement('div');
+        detalhesDiv.className = "descricaoDiv2";
+        detalhesDiv.innerHTML = `Disciplina: ${item.disciplina} <br> Sala: ${item.sala}`;
+        
+        li.appendChild(professorDiv);
+        li.appendChild(detalhesDiv);
+        
+        lista.appendChild(li);
       });
     }
 
     function voltar(passo) {
-      document.getElementById('opcao-section').classList.add('hidden');
-      document.getElementById(`${passo}-section`).classList.remove('hidden');
+      switch (passo) {
+        case 'periodo':
+          document.getElementById('dia-section').classList.add('hidden');
+          document.getElementById('periodo-section').classList.remove('hidden');
+          break;
+        case 'inicio':
+          document.getElementById('dia-section').classList.add('hidden');
+          document.getElementById('periodo-section').classList.remove('hidden');
+          document.getElementById('opcao-section').classList.add('hidden');
+          break;
+        case 'dia':
+          document.getElementById('opcao-section').classList.add('hidden');
+          document.getElementById('dia-section').classList.remove('hidden');
+          break;
+        case 'opcao':
+          document.getElementById('lista-section').classList.add('hidden');
+          document.getElementById('opcao-section').classList.remove('hidden');
+          break;
+      }
     }
 
     function filtrarLista() {
       const filtro = document.getElementById('filtro-input').value.toLowerCase();
-      const lista = document.getElementById('lista-opcoes').getElementsByTagName('li');
+      const lista = document.getElementById('lista-opcoes');
+      const itens = lista.getElementsByTagName('li');
 
-      for (let item of lista) {
-        item.style.display = item.textContent.toLowerCase().includes(filtro) ? '' : 'none';
+      for (let i = 0; i < itens.length; i++) {
+        const itemTexto = itens[i].textContent || itens[i].innerText;
+        if (itemTexto.toLowerCase().includes(filtro)) {
+          itens[i].style.display = '';
+        } else {
+          itens[i].style.display = 'none';
+        }
       }
     }
   </script>
+
 </body>
 </html>
